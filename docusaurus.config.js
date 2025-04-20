@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Ai-Notes.xyz',
   tagline: 'Your AI-powered app for chatting, managing tasks, and taking notes effortlessly.',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logoAiNotesXyz.png',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
@@ -79,7 +79,7 @@ const config = {
         title: 'Ai-Notes.xyz',
         logo: {
           alt: 'Ai-Notes.xyz Logo',
-          src: 'img/logo.svg',
+          src: 'img/logoAiNotesXyz.png',
         },
         items: [
           {
