@@ -7,6 +7,9 @@ Follow these steps to set up AI Notes on your local machine:
 2. Install [Node.js](https://nodejs.org/) (LTS version recommended).
 3. Install [npm](https://www.npmjs.com/) (comes with Node.js).
 4. Install [MongoDB](https://www.mongodb.com/try/download/community) and ensure it is running locally.
+5. Set up an **S3-compatible storage** like [Cloudflare R2](https://www.cloudflare.com/products/r2/), [DigitalOcean Spaces](https://www.digitalocean.com/products/spaces/), or [Fly.io](https://fly.io/).
+6. Obtain API keys for **OpenRouter** if for AI features.
+7. Obtain API keys for **Groq** if for AI features.
 
 ## Steps to Self-Host
 
