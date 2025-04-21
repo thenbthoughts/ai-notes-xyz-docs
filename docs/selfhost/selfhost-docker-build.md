@@ -17,6 +17,7 @@ Follow these steps to set up AI Notes on your local machine or server using Dock
 ## Step 1: Build a docker image
 
 ### Step 1.1 Create a file docker image
+Filename: `Dockerfile`
 ```
 # Stage 1: Clone
 FROM alpine:latest as gitclone
@@ -57,9 +58,6 @@ CMD ["npm", "start"]
 ```
 
 ### Step 1.2 Build the docker image
-
-Filename: `Dockerfile`
-
 ```bash
 docker build -t ai-notes-xyz .
 ```
@@ -85,7 +83,6 @@ services:
     container_name: ai-notes-app
     extra_hosts:
       - "host.docker.internal:host-gateway"
-
 ```
 
 ### Step 2.2 Run the docker compose
