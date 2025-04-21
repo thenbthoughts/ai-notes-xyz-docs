@@ -1,41 +1,18 @@
-# Website
+# AI Notes Documentation
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This folder contains the documentation for the AI Notes project (`ai-notes.xyz`).
 
-### Installation
+## Structure
 
-```
-$ yarn
-```
+- [intro.md](/docs/intro.md): Introduction and overview of AI Notes, including main features and a demo link.
+- [demo-website.md](/docs/demo-website.md): Information about the public demo site.
+- [roadmap.md](/docs/roadmap.md): Project roadmap and planned features.
+- [featured](/docs/pages/chatone): Features of Ai Notes project.
+- [roadmap.md](/docs/selfhost/selfhost-docker-build): Guides and files for self-hosting AI Notes.
 
-### Local Development
+## How to Use
 
-```
-$ yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
-
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+- Browse the Markdown files to learn about AI Notes features, usage, and development plans.
+- Visit the demo at [http://demo.ai-notes.xyz/](http://demo.ai-notes.xyz/).
+- See [roadmap.md](/docs/roadmap.md) for upcoming features.
+- For self-hosting instructions, check the `selfhost` subfolder.
