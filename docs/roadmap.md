@@ -13,7 +13,8 @@ sidebar_position: 5
 - [x] Chat One
 - [x] Tasks
 - [x] Memo
-- [ ] Chat (with AI)
+- [x] Chat (with AI)
+    - Completed on 27th April 2025
 - [ ] Life Events
 - [ ] Contact
 - [ ] Finance
