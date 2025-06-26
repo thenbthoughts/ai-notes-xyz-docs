@@ -11,14 +11,27 @@ sidebar_position: 2
 
 ## Features:
 - [x] Chat One
+    - [x] Phase 1
+        - Completed
 - [x] Tasks
+    - [x] Phase 1
+        - Completed
 - [x] Memo
+    - [x] Phase 1
+        - Completed
 - [x] Chat (with AI)
-    - Completed on 27th April 2025
-- [ ] Life Events
-- [ ] Contact
+    - [x] Phase 1
+        - Completed on 27th April 2025
+- [x] Life Events
+    - [x] Phase 1
+        - Completed on 13th June 2025
+- [x] Notes
+    - [x] Phase 1
+        - Completed on 23th June 2025
+- [x] Info vault
+    - [x] Phase 1
+        - Completed on 26th June 2025
 - [ ] Finance
-- [ ] Notes
 - [ ] Calendar
 - [ ] Alarm
 - [ ] Universal search
