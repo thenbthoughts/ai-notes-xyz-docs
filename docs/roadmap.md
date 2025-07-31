@@ -10,32 +10,39 @@ sidebar_position: 2
 - [ ] Implement a documentation on backup for user data.
 
 ## Features:
-- [x] Chat One
-    - [x] Phase 1
-        - Completed
-- [x] Tasks
-    - [x] Phase 1
-        - Completed
-- [x] Memo
-    - [x] Phase 1
+- [x] Homepage
+    - Phase 1
         - Completed
 - [x] Chat (with AI)
     - [x] Phase 1
         - Completed on 27th April 2025
-- [x] Life Events
+    - [x] Phase 2 - Implement vector database and ollama embedding
+        - Completed
+    - [ ] Phase 3 - Graph db
+    - [ ] Phase 4 - Talk with AI (with images) (basic)
+    - [ ] Phase 5 - Deep Research
+    - [ ] Phase 6 - something more
+- [x] Tasks
     - [x] Phase 1
-        - Completed on 13th June 2025
+        - Completed
+    - [ ] Phase 2 - Task Schedule
 - [x] Notes
     - [x] Phase 1
         - Completed on 23th June 2025
+- [x] Life Events
+    - [x] Phase 1
+        - Completed on 13th June 2025
 - [x] Info vault
     - [x] Phase 1
         - Completed on 26th June 2025
-- [ ] Finance
 - [ ] Calendar
 - [ ] Alarm
+- [ ] Maps (by OSM)
+    - [ ] Phase 1: A interactive menu of user journey
+- [ ] Finance
 - [ ] Universal search
 - [ ] AI Deep Answerer
+- [ ] Setting
 
 ## Pages
 - [x] Profile
