@@ -51,6 +51,7 @@ WORKDIR /app
 COPY --from=buildapi /app/build ./build
 COPY --from=buildapi /app/package*.json ./
 COPY --from=buildfrontend /app/dist ./dist
+RUN node -e "require('fs').writeFileSync('./dist/DEPLOY_DATE.txt', new Date().toISOString())"
 RUN npm install --only=production
 RUN ls -al
 EXPOSE 2000
