@@ -18,14 +18,15 @@ sidebar_position: 2
         - Completed on 27th April 2025
     - [x] Phase 2 - Implement vector database and ollama embedding
         - Completed
-    - [ ] Phase 3 - Graph db
-    - [ ] Phase 4 - Talk with AI (with images) (basic)
+    - [x] Phase 3 - Graph db
+    - [x] Phase 4 - Talk with AI (with images) (basic)
     - [ ] Phase 5 - Deep Research
     - [ ] Phase 6 - something more
 - [x] Tasks
     - [x] Phase 1
         - Completed
-    - [ ] Phase 2 - Task Schedule
+    - [x] Phase 2 - Task Schedule
+        - Completed on 10th August 2025
 - [x] Notes
     - [x] Phase 1
         - Completed on 23th June 2025
@@ -43,6 +44,9 @@ sidebar_position: 2
 - [ ] Universal search
 - [ ] AI Deep Answerer
 - [ ] Setting
+    - [x] Set basic info
+    - [x] Set api key
+    - [ ] 2FA
 
 ## Pages
 - [x] Profile
