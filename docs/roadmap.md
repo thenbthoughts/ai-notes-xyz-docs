@@ -19,7 +19,7 @@ sidebar_position: 2
     - [x] Phase 2 - Implement vector database and ollama embedding
         - Completed
     - [x] Phase 3 - Graph db
-    - [x] Phase 4 - Talk with AI (with images) (basic)
+    - [ ] Phase 4 - Talk with AI (with images) (basic)
     - [ ] Phase 5 - Deep Research
     - [ ] Phase 6 - something more
 - [x] Tasks
