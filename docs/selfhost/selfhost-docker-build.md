@@ -23,25 +23,25 @@ Filename: `Dockerfile`
 FROM alpine:latest as gitclone
 RUN apk add --no-cache git
 WORKDIR /app
-RUN git clone https://github.com/thenbthoughts/ai-notes-client.git
-RUN git clone https://github.com/thenbthoughts/ai-notes-api.git
+RUN git clone https://github.com/thenbthoughts/ai-notes-xyz-client.git
+RUN git clone https://github.com/thenbthoughts/ai-notes-xyz-api.git
 RUN ls
 
 # Stage 2: Build frontend
 FROM node:18 AS buildfrontend
 WORKDIR /app
-COPY --from=gitclone /app/ai-notes-client/package*.json ./
+COPY --from=gitclone /app/ai-notes-xyz-client/package*.json ./
 RUN npm install
-COPY --from=gitclone /app/ai-notes-client ./
+COPY --from=gitclone /app/ai-notes-xyz-client ./
 RUN npm run build
 
 # Stage 3: Build api
 FROM node:18 AS buildapi
 WORKDIR /app
-COPY --from=gitclone /app/ai-notes-api/package*.json ./
+COPY --from=gitclone /app/ai-notes-xyz-api/package*.json ./
 RUN npm install
-COPY --from=gitclone /app/ai-notes-api/src ./src
-COPY --from=gitclone /app/ai-notes-api/tsconfig.json ./tsconfig.json
+COPY --from=gitclone /app/ai-notes-xyz-api/src ./src
+COPY --from=gitclone /app/ai-notes-xyz-api/tsconfig.json ./tsconfig.json
 RUN npm run build
 
 # Stage 4: Production
