@@ -37,9 +37,12 @@ sidebar_position: 2
     - [x] Phase 1
         - Completed on 26th June 2025
 - [ ] Calendar
+    - [x] Phase 1
+        - Completed on 26th September 2025
 - [ ] Alarm
-- [ ] Maps (by OSM)
-    - [ ] Phase 1: A interactive menu of user journey
+- [x] Maps (by OSM)
+    - [x] Phase 1: A interactive menu of user journey
+        - Completed on 26th September 2025
 - [ ] Finance
 - [ ] Universal search
 - [ ] AI Deep Answerer
