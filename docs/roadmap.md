@@ -36,7 +36,7 @@ sidebar_position: 2
 - [x] Info vault
     - [x] Phase 1
         - Completed on 26th June 2025
-- [ ] Calendar
+- [x] Calendar
     - [x] Phase 1
         - Completed on 26th September 2025
 - [ ] Alarm
