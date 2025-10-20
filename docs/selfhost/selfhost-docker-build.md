@@ -76,12 +76,8 @@ services:
     ports:
       - "53535:2000"
     environment:
-      - NODE_ENV=production
-      - CUSTOM_NODE_ENV=prod
-      - EXPRESS_PORT=2000
-      - FRONTEND_CLIENT_URL=http://localhost:53535
       - MONGODB_URI=mongodb://host.docker.internal:27017/ai-notes-advance-temp
-    container_name: ai-notes-app
+    container_name: ai-notes-app-username-aio
     extra_hosts:
       - "host.docker.internal:host-gateway"
 ```

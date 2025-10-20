@@ -1,10 +1,5 @@
-# Selfhost by Coolify
+# Dockerfile for AI Notes XYZ Self-Hosted Deployment
 
-## Note:
-1. The following instructions describe how to set up self-hosted ai-notes.xyz using Coolify.
-2. (Optional) For improved search performance, consider adding Ollama and Qdrant.
-
-## Step 1: Docker file
 ```
 # Stage 1: Clone
 FROM alpine:latest as gitclone
@@ -43,12 +38,4 @@ RUN npm install --only=production
 RUN ls -al
 EXPOSE 2000
 CMD ["npm", "start"]
-```
-
-## Step 2: Env file
-
-Note: Only one environment variable is required: MONGODB_URI
-
-```
-MONGODB_URI=mongodb://USERNAME:PASSWORD@HOST:27017/ai-notes-xyz-YOURUSERNAME?authSource=admin&directConnection=true
 ```
