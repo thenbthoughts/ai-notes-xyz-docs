@@ -10,7 +10,14 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header
+      className={clsx('hero hero--primary', styles.heroBanner)}
+      style={{
+        backgroundImage: 'url(/img/ai-notes-xyz-background.png)',
+        backgroundSize: 'cover',
+        minHeight: '80vh',
+      }}
+    >
       <div className="container">
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
@@ -30,6 +37,7 @@ function HomepageHeader() {
             target="_blank"
             rel="noreferrer noopener"
             style={{
+              backgroundColor: '#54be61',
               border: '1px solid #fff',
             }}
           >
@@ -40,6 +48,8 @@ function HomepageHeader() {
             to="/docs/roadmap"
             style={{
               margin: '1rem',
+              backgroundColor: '#28ff4a',
+              color: '#ffffff',
             }}
           >
             Features
@@ -48,6 +58,7 @@ function HomepageHeader() {
             className="button button--primary button--lg"
             to="/docs/selfhost/selfhost-docker-build"
             style={{
+              backgroundColor: '#54be61',
               border: '1px solid #fff',
             }}
           >
