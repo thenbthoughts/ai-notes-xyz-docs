@@ -15,7 +15,12 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle">
+          {siteConfig.tagline}
+          <br />
+          Lightweight, privacy-first note taking with AI features - self-hostable.
+        </p>
+
         <div
           className={`${styles.buttons} ${styles.buttondiv}`}
         >
@@ -28,16 +33,25 @@ function HomepageHeader() {
               border: '1px solid #fff',
             }}
           >
-            Explore the Live Demo
+            Live Demo
           </Link>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro"
+            to="/docs/roadmap"
             style={{
               margin: '1rem',
             }}
           >
-            Deploy Your Own AI Notes
+            Features
+          </Link>
+          <Link
+            className="button button--primary button--lg"
+            to="/docs/selfhost/selfhost-docker-build"
+            style={{
+              border: '1px solid #fff',
+            }}
+          >
+            Self Host
           </Link>
         </div>
       </div>

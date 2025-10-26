@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Ai-Notes.xyz',
-  tagline: 'Your AI-powered app for chatting, managing tasks, and taking notes effortlessly.',
+  title: 'AI Notes XYZ - Smart notes, tasks, and chat in one app.',
+  tagline: 'Capture ideas, manage tasks, and get instant AI help - ideal for students, managers, and makers',
   favicon: 'img/logoAiNotesXyz.png',
 
   // Set the production url of your site here
