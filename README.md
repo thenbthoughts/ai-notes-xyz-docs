@@ -2,13 +2,15 @@
 
 This folder contains the documentation for the AI Notes project (`ai-notes.xyz`).
 
+## For detailed documentation, visit the [docs folder](./docs) or browse online at [ai-notes.xyz/docs](https://ai-notes.xyz/docs).
+
 ## Structure
 
 - [intro.md](/docs/intro.md): Introduction and overview of AI Notes, including main features and a demo link.
 - [demo-website.md](/docs/demo-website.md): Information about the public demo site.
 - [roadmap.md](/docs/roadmap.md): Project roadmap and planned features.
 - [featured](/docs/pages/chatone): Features of Ai Notes project.
-- [roadmap.md](/docs/selfhost/selfhost-docker-build): Guides and files for self-hosting AI Notes.
+- [selfhost.md](/docs/selfhost/selfhost-docker-build): Guides and files for self-hosting AI Notes.
 
 ## How to Use
 
