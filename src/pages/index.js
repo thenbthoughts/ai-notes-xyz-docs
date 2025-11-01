@@ -56,7 +56,7 @@ function HomepageHeader() {
           </Link>
           <Link
             className="button button--primary button--lg"
-            to="/docs/selfhost/selfhost-docker-build"
+            to="/docs/deployment/docker-build"
             style={{
               backgroundColor: '#54be61',
               border: '1px solid #fff',

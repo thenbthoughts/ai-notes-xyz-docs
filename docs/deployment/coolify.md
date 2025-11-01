@@ -1,8 +1,14 @@
+---
+sidebar_position: 5
+---
+
 # Selfhost by Coolify
 
 ## Note:
 1. The following instructions describe how to set up self-hosted ai-notes.xyz using Coolify.
 2. (Optional) For improved search performance, consider adding Ollama and Qdrant.
+
+For detailed information about environment variables, see [Environment Variables](/docs/deployment/environment-variables).
 
 ## Step 1: Docker file
 ```
@@ -52,3 +58,6 @@ Note: Only one environment variable is required: MONGODB_URI
 ```
 MONGODB_URI=mongodb://USERNAME:PASSWORD@HOST:27017/ai-notes-xyz-YOURUSERNAME?authSource=admin&directConnection=true
 ```
+
+For other optional environment variables, see [Environment Variables](/docs/deployment/environment-variables).
+

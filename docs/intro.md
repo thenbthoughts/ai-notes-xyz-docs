@@ -69,7 +69,7 @@ A: No! Demo works immediately.
 A: Yes! When self-hosted, data stays on your server.
 
 **Q: What do I need to self-host?**  
-A: Docker, MongoDB, API keys. [See guide →](/docs/selfhost/selfhost-docker-build)
+A: Docker, MongoDB, API keys. [See guide →](/docs/deployment/docker-build)
 
 **Q: What makes this different?**  
 A: AI searches ALL your data automatically. Ask "What do I need to do?" → Get answers from everything you've saved.

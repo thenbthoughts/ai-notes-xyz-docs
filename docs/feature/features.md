@@ -88,5 +88,5 @@ Quick access: Current time, your age, next birthday countdown, daily quote, quic
 
 ---
 
-**[👉 Try Demo →](http://demo.ai-notes.xyz/)** | **[Self-Host →](/docs/selfhost/selfhost-docker-build)**
+**[👉 Try Demo →](http://demo.ai-notes.xyz/)** | **[Self-Host →](/docs/deployment/docker-build)**
 

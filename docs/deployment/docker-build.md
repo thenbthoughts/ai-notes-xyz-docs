@@ -1,14 +1,17 @@
+---
+sidebar_position: 4
+---
+
 # How to Build and Self-Host AI Notes Using Docker from Scratch
 
 Follow these steps to set up AI Notes on your local machine or server using Docker.
 
 ## Prerequisites
-1. Install MongoDB and ensure it is running locally.
-2. Install [Docker](https://www.docker.com/).
-3. Install [Docker Compose](https://docs.docker.com/compose/).
-4. Set up an **S3-compatible storage** like [Cloudflare R2](https://www.cloudflare.com/products/r2/), [DigitalOcean Spaces](https://www.digitalocean.com/products/spaces/), or [Fly.io](https://fly.io/).
-5. Obtain API keys for **OpenRouter** if for AI features.
-6. Obtain API keys for **Groq** if for AI features.
+1. Install [Docker](https://www.docker.com/).
+2. Install [Docker Compose](https://docs.docker.com/compose/).
+3. Set up MongoDB. See [MongoDB Setup Guide](/docs/deployment/mongodb-setup) for detailed instructions.
+
+For optional features like S3 storage, AI providers, SMTP, etc., see [Environment Variables](/docs/deployment/environment-variables).
 
 ---
 
@@ -98,3 +101,4 @@ To stop and remove the containers, run:
 ```
 docker-compose down
 ```
+
