@@ -30,7 +30,7 @@ function HomepageHeader() {
           </p>
           <p className={styles.heroDescription}>
             Never lose track of what matters. AI automatically connects your notes, tasks, contacts, and events. 
-            <strong> Search everything instantly.</strong> Self-hosted. Private. Yours.
+            Self-hosted. Private. Yours.
           </p>
           
           <div className={styles.trustBadges}>
