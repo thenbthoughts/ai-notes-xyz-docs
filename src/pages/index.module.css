@@ -4,15 +4,147 @@
  */
 
 .heroBanner {
-  padding: 2rem 0;
+  padding: 4rem 0 6rem;
   text-align: center;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 1rem;
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.heroTextWrapper {
+  margin-bottom: 3rem;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  line-height: 1.2;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.heroSubtitle {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+.heroDescription {
+  font-size: 1.25rem;
+  margin: 1.5rem auto 2rem;
+  max-width: 700px;
+  opacity: 0.95;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.8s ease-out 0.4s both;
+  line-height: 1.7;
+}
+
+.heroDescription strong {
+  color: #54be61;
+  font-weight: 700;
+  text-shadow: 1px 1px 4px rgba(84, 190, 97, 0.5);
+}
+
+.trustBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+  animation: fadeIn 0.8s ease-out 0.6s both;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.badge:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.badgeIcon {
+  font-size: 1.1rem;
+  display: inline-block;
+}
+
+.scrollIndicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2.5rem;
+  animation: fadeIn 0.8s ease-out 1s both, bounce 2s ease-in-out 1.5s infinite;
+}
+
+.scrollText {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.scrollArrow {
+  font-size: 1.5rem;
+  opacity: 0.8;
+  animation: bounceDown 2s ease-in-out infinite;
+}
+
+@keyframes bounceDown {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 0.6;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
   }
 }
 
@@ -20,10 +152,211 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  animation: fadeIn 0.8s ease-out 0.8s both;
+}
+
+.buttondiv {
+  display: flex;
+}
+
+.primaryButton,
+.secondaryButton,
+.tertiaryButton {
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1.75rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 2px solid transparent;
+  min-width: 180px;
+  text-align: center;
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, #54be61 0%, #45a050 100%);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1);
+  order: -1;
+  padding: 1.25rem 2rem;
+}
+
+.primaryButton:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(84, 190, 97, 0.4);
+  background: linear-gradient(135deg, #5fc86f 0%, #54be61 100%);
+}
+
+.primaryButton .buttonText {
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.primaryButton .buttonIcon {
+  align-self: flex-start;
+}
+
+.secondaryButton {
+  background: rgba(255, 255, 255, 0.95);
+  color: #2e8555;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.secondaryButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+  background: #ffffff;
+}
+
+.tertiaryButton {
+  background: rgba(84, 190, 97, 0.2);
+  color: #ffffff;
+  border-color: rgba(84, 190, 97, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.tertiaryButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(84, 190, 97, 0.3);
+  background: rgba(84, 190, 97, 0.3);
+}
+
+.buttonIcon {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.buttonText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.buttonSubtext {
+  font-size: 0.7rem;
+  font-weight: 400;
+  opacity: 0.9;
+  display: block;
+  margin-top: 0.15rem;
+  letter-spacing: 0.3px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem 0 4rem;
+    min-height: 75vh;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.5rem;
+  }
+
+  .heroDescription {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  .trustBadges {
+    gap: 0.75rem;
+  }
+
+  .badge {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+
   .buttondiv {
     flex-direction: column;
+    width: 100%;
+  }
+
+  .primaryButton,
+  .secondaryButton,
+  .tertiaryButton {
+    width: 100%;
+    max-width: 300px;
+    margin: 0.5rem 0;
+    flex-direction: row;
+  }
+
+  .primaryButton .buttonText {
+    align-items: center;
+    text-align: center;
+  }
+
+  .primaryButton .buttonIcon {
+    align-self: center;
+  }
+
+  .buttons {
+    gap: 0.5rem;
+  }
+
+  .scrollIndicator {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.25rem;
+  }
+
+  .heroDescription {
+    font-size: 1rem;
+  }
+
+  .trustBadges {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .badge {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .scrollIndicator {
+    margin-top: 1.5rem;
   }
 }

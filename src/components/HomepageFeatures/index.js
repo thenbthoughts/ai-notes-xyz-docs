@@ -4,20 +4,20 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Dashboard',
+    title: 'Unified Dashboard',
     imageUrl: '/img/ai-notes-xyz-screenshot/ai-notes-homepage.png',
     description: (
       <>
-        Quick access to everything. See your tasks, notes, and AI suggestions at a glance.
+        Your command center. See all your tasks, notes, upcoming events, and AI-powered suggestions in one beautiful view.
       </>
     ),
   },
   {
-    title: 'AI Chat',
+    title: 'AI Chat Assistant',
     imageUrl: '/img/ai-notes-xyz-screenshot/ai-notes-chat.png',
     description: (
       <>
-        Ask anything. AI searches YOUR notes, tasks, and Info Vault automatically.
+        Ask natural questions and get instant answers. The AI searches through YOUR personal notes, tasks, contacts, and events—all automatically.
       </>
     ),
   },
@@ -26,25 +26,25 @@ const FeatureList = [
     imageUrl: '/img/ai-notes-xyz-screenshot/ai-notes-notes.png',
     description: (
       <>
-        Write ideas, meeting notes, reminders. AI adds tags and summaries automatically.
+        Write your notes naturally—AI will automatically add tags, generate summaries, and let you chat with your notes or find them instantly with simple search.
       </>
     ),
   },
   {
-    title: 'Task Management',
+    title: 'Visual Task Boards',
     imageUrl: '/img/ai-notes-xyz-screenshot/ai-notes-task.png',
     description: (
       <>
-        Kanban boards (Todo → Doing → Done). Move tasks between columns, set priorities, generate with AI.
+        Kanban-style boards (Todo → Doing → Done). Drag and drop tasks, set priorities, and even generate tasks with AI assistance.
       </>
     ),
   },
   {
-    title: 'Life Events',
+    title: 'Life Events Tracker',
     imageUrl: '/img/ai-notes-xyz-screenshot/ai-notes-life-events.png',
     description: (
       <>
-        Track birthdays, anniversaries, milestones. AI auto-categorizes and adds tags.
+        Never miss an important date. Track birthdays, anniversaries, milestones, and more. AI automatically categorizes and tags everything.
       </>
     ),
   },
@@ -53,16 +53,17 @@ const FeatureList = [
     imageUrl: '/img/ai-notes-xyz-screenshot/ai-notes-info-vault.png',
     description: (
       <>
-        Central database for contacts, places, documents. AI searches it automatically.
+        Your personal knowledge base. Store contacts, places, documents, and any important information. Effortlessly find what you need using search.
       </>
     ),
   },
   {
-    title: 'Task Schedule',
+    title: 'Automated Scheduling',
     imageUrl: '/img/ai-notes-xyz-screenshot/ai-notes-task-schedule.png',
     description: (
       <>
-        Automated recurring tasks. Daily/weekly/monthly schedules with email reminders.
+        Create recurring tasks with daily, weekly, or monthly schedules.<br />
+        You can also create email reminders to yourself that are automatically delivered to your inbox.
       </>
     ),
   }
@@ -70,95 +71,40 @@ const FeatureList = [
 
 function Feature({ imageUrl, title, description, idx }) {
   return (
-    <div className={clsx('col col--12')}>
+    <div className={clsx('col col--12', styles.featureCard)} style={{ animationDelay: `${idx * 0.1}s` }}>
       <div className="text--center">
         <a
           href="https://demo.ai-notes.xyz/"
           target='_blank'
+          rel="noopener noreferrer"
+          className={styles.featureImageLink}
         >
           <img
             src={imageUrl}
             alt={title}
-            style={{
-              width: '600px',
-              maxWidth: '100%',
-              height: 'auto',
-              marginTop: '20px',
-              marginBottom: '20px',
-              borderRadius: '10px',
-              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-            }}
+            className={styles.featureImage}
           />
         </a>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
+        <div className={styles.viewFullSizeWrapper}>
           <a
             href={imageUrl}
             target='_blank'
             rel='noopener noreferrer'
-            style={{
-              display: 'block',
-              width: '600px',
-              maxWidth: '100%',
-              marginTop: '8px',
-              marginBottom: '8px',
-              padding: '8px 16px',
-              background: 'linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-primary-light))',
-              color: 'white',
-              textDecoration: 'none',
-              borderRadius: '25px',
-              fontSize: '14px',
-              fontWeight: '600',
-              textTransform: 'uppercase',
-              letterSpacing: '0.5px',
-              boxShadow: '0 4px 15px rgba(46, 133, 85, 0.3)',
-              border: '2px solid transparent',
-              position: 'relative',
-              overflow: 'hidden',
-              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-              transform: 'translateY(0)',
-            }}
-            onMouseOver={(e) => {
-              e.target.style.transform = 'translateY(-2px)';
-              e.target.style.boxShadow = '0 8px 25px rgba(46, 133, 85, 0.4)';
-              e.target.style.background = 'linear-gradient(135deg, var(--ifm-color-primary-dark), var(--ifm-color-primary))';
-            }}
-            onMouseOut={(e) => {
-              e.target.style.transform = 'translateY(0)';
-              e.target.style.boxShadow = '0 4px 15px rgba(46, 133, 85, 0.3)';
-              e.target.style.background = 'linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-primary-light))';
-            }}
+            className={styles.viewFullSizeButton}
           >
-            <span style={{ position: 'relative', zIndex: 1 }}>
-              🔍 View Full Size
-            </span>
+            <span className={styles.buttonIcon}>🔍</span>
+            View Full Size
           </a>
         </div>
       </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+      <div className={clsx('text--center padding-horiz--md', styles.featureContent)}>
+        <Heading as="h3" className={styles.featureTitle}>{title}</Heading>
+        <p className={styles.featureDescription}>{description}</p>
       </div>
 
       {FeatureList.length !== idx + 1 && (
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}>
-          <div style={{
-            borderBottom: '1px solid var(--ifm-color-emphasis-300)',
-            marginTop: '16px',
-            marginBottom: '16px',
-            width: '100%',
-            maxWidth: '600px',
-          }}>
-          </div>
+        <div className={styles.featureDivider}>
+          <div className={styles.dividerLine}></div>
         </div>
       )}
     </div>
@@ -169,6 +115,14 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
+        <div className={styles.featuresHeader}>
+          <Heading as="h2" className={styles.featuresTitle}>
+            Everything You Need, All in One Place
+          </Heading>
+          <p className={styles.featuresSubtitle}>
+            AI Notes XYZ connects your notes, tasks, contacts, and events—then helps you find anything instantly with AI-powered search.
+          </p>
+        </div>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} idx={idx} />
