@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Life Events
 
-Keep track of moments that matter—birthdays, purchases, milestones, and more.
+Keep track of moments that matter, birthdays, purchases, milestones, and more.
 
 ## Table of Contents
 
