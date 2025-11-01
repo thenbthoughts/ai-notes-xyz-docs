@@ -25,7 +25,7 @@ function HomepageHeader() {
         <p className="hero__subtitle">
           {siteConfig.tagline}
           <br />
-          Lightweight, privacy-first note taking with AI features - self-hostable.
+          Your notes, tasks, and life events connected by AI.
         </p>
 
         <div
@@ -45,14 +45,14 @@ function HomepageHeader() {
           </Link>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/roadmap"
+            to="/docs/intro"
             style={{
               margin: '1rem',
               backgroundColor: '#28ff4a',
               color: '#ffffff',
             }}
           >
-            Features
+            Get Started
           </Link>
           <Link
             className="button button--primary button--lg"
@@ -74,8 +74,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={siteConfig.title}
+      description="AI-powered productivity hub. Notes, tasks, contacts, and events in one place. AI searches your data automatically. Self-hostable and private.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

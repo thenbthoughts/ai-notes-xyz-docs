@@ -4,29 +4,29 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'AI Notes Homepage',
+    title: 'Dashboard',
     imageUrl: '/img/ai-notes-xyz-screenshot/ai-notes-homepage.png',
     description: (
       <>
-        A clean and intuitive homepage to get you started quickly.
+        Quick access to everything. See your tasks, notes, and AI suggestions at a glance.
       </>
     ),
   },
   {
-    title: 'Intelligent Chat',
+    title: 'AI Chat',
     imageUrl: '/img/ai-notes-xyz-screenshot/ai-notes-chat.png',
     description: (
       <>
-        Experience intelligent AI-powered chat for brainstorming and note-taking.
+        Ask anything. AI searches YOUR notes, tasks, and Info Vault automatically.
       </>
     ),
   },
   {
-    title: 'Notes',
+    title: 'Smart Notes',
     imageUrl: '/img/ai-notes-xyz-screenshot/ai-notes-notes.png',
     description: (
       <>
-        Quickly capture and organize your thoughts with AI-assisted notes.
+        Write ideas, meeting notes, reminders. AI adds tags and summaries automatically.
       </>
     ),
   },
@@ -35,7 +35,7 @@ const FeatureList = [
     imageUrl: '/img/ai-notes-xyz-screenshot/ai-notes-task.png',
     description: (
       <>
-        Manage your tasks efficiently with AI-generated suggestions and organization.
+        Kanban boards (Todo → Doing → Done). Move tasks between columns, set priorities, generate with AI.
       </>
     ),
   },
@@ -44,7 +44,7 @@ const FeatureList = [
     imageUrl: '/img/ai-notes-xyz-screenshot/ai-notes-life-events.png',
     description: (
       <>
-        Manage your life events efficiently with AI-generated suggestions and organization.
+        Track birthdays, anniversaries, milestones. AI auto-categorizes and adds tags.
       </>
     ),
   },
@@ -53,7 +53,7 @@ const FeatureList = [
     imageUrl: '/img/ai-notes-xyz-screenshot/ai-notes-info-vault.png',
     description: (
       <>
-        Store your important information in a secure and private vault.
+        Central database for contacts, places, documents. AI searches it automatically.
       </>
     ),
   },
@@ -62,7 +62,7 @@ const FeatureList = [
     imageUrl: '/img/ai-notes-xyz-screenshot/ai-notes-task-schedule.png',
     description: (
       <>
-        Schedule your tasks efficiently with AI-generated suggestions and organization.
+        Automated recurring tasks. Daily/weekly/monthly schedules with email reminders.
       </>
     ),
   }
@@ -135,13 +135,13 @@ function Feature({ imageUrl, title, description, idx }) {
             }}
           >
             <span style={{ position: 'relative', zIndex: 1 }}>
-              🔍 View Full Image
+              🔍 View Full Size
             </span>
           </a>
         </div>
       </div>
       <div className="text--center padding-horiz--md">
-        <Heading as="h3">Feature {idx + 1}: {title}</Heading>
+        <Heading as="h3">{title}</Heading>
         <p>{description}</p>
       </div>
 

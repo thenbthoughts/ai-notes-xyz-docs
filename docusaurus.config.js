@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'AI Notes XYZ - Smart notes, tasks, and chat in one app.',
-  tagline: 'Capture ideas, manage tasks, and get instant AI help - ideal for students, managers, and makers',
+  tagline: 'Capture ideas, manage tasks, and get instant AI help.',
   favicon: 'img/logoAiNotesXyz.png',
 
   // Set the production url of your site here
@@ -22,8 +22,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'thenbthoughts', // Usually your GitHub org/user name.
+  projectName: 'ai-notes-xyz-docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
