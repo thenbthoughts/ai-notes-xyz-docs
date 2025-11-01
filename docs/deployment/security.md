@@ -26,7 +26,7 @@ MONGODB_URI=mongodb://username:strong-password@localhost:27017/ai-notes-xyz?auth
 ### Environment Variables
 
 - ✅ **Never commit secrets:** Use `.env` files and add to `.gitignore`
-- ✅ **Use secrets management:** Kubernetes secrets, Docker secrets, or vaults
+- ✅ **Use secrets management:** Docker secrets or vaults
 - ✅ **Rotate credentials:** Regularly update API keys and passwords
 - ✅ **Limit access:** Only expose necessary environment variables
 
@@ -110,13 +110,6 @@ server {
 - ✅ **Image scanning:** Scan Docker images for vulnerabilities
 - ✅ **Minimal images:** Use Alpine-based images
 - ✅ **Secrets:** Use Docker secrets instead of environment variables
-
-### Kubernetes
-
-- ✅ **RBAC:** Implement Role-Based Access Control
-- ✅ **Network Policies:** Restrict pod-to-pod communication
-- ✅ **Pod Security:** Use Pod Security Standards
-- ✅ **Image Policies:** Only allow signed images
 
 ## Monitoring & Logging
 

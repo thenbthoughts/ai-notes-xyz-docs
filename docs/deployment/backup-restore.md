@@ -4,11 +4,23 @@ sidebar_position: 8
 
 # Backup & Restore
 
+:::warning ⚠️ Critical: Weekly Backups Required
+**Take backups of your MongoDB data every week** to prevent data loss. Set up automated backups and test restore procedures regularly.
+:::
+
 How to backup and restore your AI Notes data.
 
 ## MongoDB Backup
 
+:::tip 💾 Backup Frequency
+**Recommended:** Take backups at least once per week. For production systems, consider daily backups.
+:::
+
 ### Manual Backup
+
+:::info 📋 Before Starting
+Make sure you have enough disk space for the backup. A typical backup is 10-50% of your database size (compressed).
+:::
 
 **Using mongodump:**
 
@@ -34,6 +46,10 @@ docker cp ai-notes-mongodb:/backup/ai-notes-20250101.gz ./backups/
 ```
 
 ### Automated Backup Script
+
+:::tip 🔄 Automated Weekly Backups
+Set up this script with cron to run weekly backups automatically. Don't rely on manual backups.
+:::
 
 Create `backup.sh`:
 
@@ -61,7 +77,10 @@ echo "Backup completed: ai-notes-$DATE.gz"
 
 **Schedule with cron:**
 ```bash
-# Daily backup at 2 AM
+# Weekly backup every Sunday at 2 AM (recommended minimum)
+0 2 * * 0 /path/to/backup.sh
+
+# Or daily backup at 2 AM (for production)
 0 2 * * * /path/to/backup.sh
 ```
 
@@ -93,6 +112,10 @@ docker-compose run --rm backup
 ```
 
 ## Restore
+
+:::warning ⚠️ Before Restoring
+**Always backup current data before restoring** to prevent accidental data loss. Test restore procedures in a test environment first.
+:::
 
 ### From mongodump Archive
 
@@ -179,37 +202,6 @@ crontab -e
 0 2 * * * /path/to/backup.sh >> /var/log/ai-notes-backup.log 2>&1
 ```
 
-### Using Kubernetes CronJob
-
-```yaml
-apiVersion: batch/v1
-kind: CronJob
-metadata:
-  name: ai-notes-backup
-spec:
-  schedule: "0 2 * * *"
-  jobTemplate:
-    spec:
-      template:
-        spec:
-          containers:
-          - name: backup
-            image: mongo:7
-            command:
-            - mongodump
-            - --uri=mongodb://admin:password@mongodb:27017/ai-notes-xyz?authSource=admin
-            - --archive=/backups/ai-notes-$(date +%Y%m%d).gz
-            - --gzip
-            volumeMounts:
-            - name: backup-storage
-              mountPath: /backups
-          volumes:
-          - name: backup-storage
-            persistentVolumeClaim:
-              claimName: backup-pvc
-          restartPolicy: OnFailure
-```
-
 ## Backup Verification
 
 Always verify backups:
@@ -224,13 +216,15 @@ mongorestore --uri="mongodb://localhost:27017/test-restore" --archive=/backup/ai
 
 ## Best Practices
 
-- ✅ **Automated backups:** Don't rely on manual backups
-- ✅ **Regular testing:** Test restore process monthly
-- ✅ **Multiple copies:** Keep backups in multiple locations
-- ✅ **Retention policy:** Keep backups for 30-90 days
-- ✅ **Encryption:** Encrypt backups before storage
-- ✅ **Documentation:** Document backup and restore procedures
-- ✅ **Monitoring:** Monitor backup success/failure
+- ✅ **Weekly backups minimum:** Take backups at least once per week (daily for production)
+- ✅ **Automated backups:** Don't rely on manual backups - use cron or scheduled tasks
+- ✅ **Regular testing:** Test restore process monthly to ensure backups are valid
+- ✅ **Multiple copies:** Keep backups in multiple locations (local + off-site/cloud)
+- ✅ **Retention policy:** Keep backups for 30-90 days minimum
+- ✅ **Encryption:** Encrypt backups before storage for security
+- ✅ **Documentation:** Document backup and restore procedures for team members
+- ✅ **Monitoring:** Monitor backup success/failure with alerts/notifications
+- ✅ **Backup verification:** Always verify backups can be restored after creation
 
 ---
 
