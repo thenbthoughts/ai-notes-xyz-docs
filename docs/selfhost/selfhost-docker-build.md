@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 ---
+import GetStartedSection from '@site/src/components/GetStartedSection';
 
 # 🛠️ Easy Install
 
@@ -35,3 +36,5 @@ Once running, visit `http://localhost:3000` and go to **Settings** to:
 -   **Port Conflict?** Change the ports in `docker-compose.yml`.
 
 [👉 Full Config Guide](/docs/selfhost/selfhost-docker-build)
+
+<GetStartedSection />

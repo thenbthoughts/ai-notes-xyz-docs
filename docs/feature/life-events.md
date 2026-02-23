@@ -1,6 +1,7 @@
 ---
 sidebar_position: 5
 ---
+import GetStartedSection from '@site/src/components/GetStartedSection';
 
 # 🎉 Life Events
 
@@ -32,3 +33,5 @@ It searches your Life Events instantly.
 -   **Recurring**: Set yearly repeats for birthdays.
 
 **[👉 Log an Event](http://demo.ai-notes.xyz/user/life-events)**
+
+<GetStartedSection />

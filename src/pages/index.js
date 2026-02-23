@@ -63,7 +63,9 @@ function HomepageHeader() {
             <span className={styles.buttonIcon}>🎮</span>
             <span className={styles.buttonText}>
               Try Demo
-              <span className={styles.buttonSubtext}>No signup needed</span>
+              <span className={styles.buttonSubtext}>
+                Username: demo, Password: demo1234
+              </span>
             </span>
           </Link>
           <Link

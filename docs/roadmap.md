@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 ---
+import GetStartedSection from '@site/src/components/GetStartedSection';
 
 # Roadmap for AI Notes App
 
@@ -44,7 +45,7 @@ sidebar_position: 2
     - [x] Phase 1: A interactive menu of user journey
         - Completed on 26th September 2025
 - [ ] Finance
-- [x] Universal search
+- [x] Search
     - Completed on 23rd Feb 2026
 - [ ] Setting
     - [x] Set basic info
@@ -62,3 +63,5 @@ sidebar_position: 2
 - **Exception:** If a significant number of users request a feature, and it is considered essential, it may be considered for addition.
 - Backup and restore: Implement a feature to allow users to back up their data and restore it when needed.
 - Security will be given utmost importance and handled with great care.
+
+<GetStartedSection />

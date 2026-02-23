@@ -1,3 +1,5 @@
+import GetStartedSection from '@site/src/components/GetStartedSection';
+
 # Selfhost by Coolify
 
 ## Note:
@@ -58,3 +60,5 @@ Note: Only one environment variable is required: MONGODB_URI
 ```
 MONGODB_URI=mongodb://USERNAME:PASSWORD@HOST:27017/ai-notes-xyz-YOURUSERNAME?authSource=admin&directConnection=true
 ```
+
+<GetStartedSection />

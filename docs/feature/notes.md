@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 ---
+import GetStartedSection from '@site/src/components/GetStartedSection';
 
 # 📝 Notes - Your Digital Brain
 
@@ -39,3 +40,5 @@ Star important notes to pin them to the top of your workspace. Perfect for daily
 | **Search** | Full-text search across title, content, and tags. |
 
 ---
+
+<GetStartedSection />

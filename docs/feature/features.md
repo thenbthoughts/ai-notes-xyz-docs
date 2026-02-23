@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 ---
+import GetStartedSection from '@site/src/components/GetStartedSection';
 
 # 🌟 Features in 30 Seconds
 
@@ -18,10 +19,6 @@ Write anything. The AI automatically **tags**, **summarizes**, and **links** it 
 Plan projects on Kanban boards. Ask the AI to **break down big goals** into small steps.
 - **[👉 Try Tasks](/docs/feature/task)**
 
-### 📅 Calendar & Timeline
-See your life in context. A unified stream of *everything* you did.
-- **[👉 Try Timeline](/docs/feature/timeline)**
-
 ### 🔐 Info Vault (The Safe)
 Store passwords, contacts, and asset details securely. The AI uses this for *your* answers only.
 - **[👉 Try Vault](/docs/feature/info-vault)**
@@ -37,3 +34,5 @@ Store passwords, contacts, and asset details securely. The AI uses this for *you
 ---
 
 **[👉 Try the Demo](http://demo.ai-notes.xyz/)** or **[Install Now](/docs/selfhost/selfhost-docker-build)**.
+
+<GetStartedSection />

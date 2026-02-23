@@ -1,6 +1,7 @@
 ---
 sidebar_position: 7
 ---
+import GetStartedSection from '@site/src/components/GetStartedSection';
 
 # Setting
 
@@ -14,3 +15,5 @@ The Setting page lets you customize AI Notes:
 ## Screenshot
 
 ![AI Notes Memo](/img/ai-notes-xyz-screenshot/ai-notes-setting.png)
+
+<GetStartedSection />

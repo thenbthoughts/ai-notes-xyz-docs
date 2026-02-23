@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 ---
+import GetStartedSection from '@site/src/components/GetStartedSection';
 
 # 💬 Chat with Your Second Brain
 
@@ -55,3 +56,5 @@ Drag and drop **Images**, **PDFs**, or **Voice Notes** directly into the chat. T
 </div>
 
 ---
+
+<GetStartedSection />

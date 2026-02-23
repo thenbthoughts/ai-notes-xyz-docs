@@ -1,3 +1,5 @@
+import GetStartedSection from '@site/src/components/GetStartedSection';
+
 # Supporting Features
 
 A quick, scannable overview of supporting capabilities that supercharge your workflow.
@@ -6,7 +8,7 @@ A quick, scannable overview of supporting capabilities that supercharge your wor
 
 <!-- ![AI Notes Search](/img/ai-notes-xyz-screenshot/ai-notes-search.png) -->
 
-- Universal search across notes, tasks, life events, vault, chats
+- Search across notes, tasks, life events, vault, chats
 - Filters by type, workspace.
 
 ## 💡 Suggestions
@@ -59,3 +61,5 @@ A quick, scannable overview of supporting capabilities that supercharge your wor
 -----
 
 Ready to get started? [Try the demo](http://demo.ai-notes.xyz/) or check out our [self-hosting guide](/docs/selfhost/selfhost-docker-build) to run your own instance.
+
+<GetStartedSection />

@@ -1,6 +1,7 @@
 ---
 sidebar_position: 4
 ---
+import GetStartedSection from '@site/src/components/GetStartedSection';
 
 # Task Management
 
@@ -72,3 +73,5 @@ Create tasks, set priorities and due dates, move them across lists, and finish w
 -----
 
 Ready to get started? [Try the demo](http://demo.ai-notes.xyz/) or check out our [self-hosting guide](/docs/selfhost/selfhost-docker-build) to run your own instance.
+
+<GetStartedSection />

@@ -1,6 +1,7 @@
 ---
 sidebar_position: 6
 ---
+import GetStartedSection from '@site/src/components/GetStartedSection';
 
 # 🔐 Info Vault
 
@@ -35,3 +36,5 @@ Ask AI: *"Who do I know in New York?"*
 -   **Secrets**: Passwords and keys (stored locally).
 
 **[👉 Open Vault](http://demo.ai-notes.xyz/user/info-vault)**
+
+<GetStartedSection />

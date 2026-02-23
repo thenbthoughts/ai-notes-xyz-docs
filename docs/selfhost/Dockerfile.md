@@ -1,3 +1,5 @@
+import GetStartedSection from '@site/src/components/GetStartedSection';
+
 # Dockerfile for AI Notes XYZ Self-Hosted Deployment
 
 ```
@@ -46,3 +48,5 @@ CMD ["npm", "start"]
 # 2. Run the Docker container: docker run -p 2000:2000 ai-notes-docker
 # 3. Access the application in your browser at http://localhost:2000
 ```
+
+<GetStartedSection />
