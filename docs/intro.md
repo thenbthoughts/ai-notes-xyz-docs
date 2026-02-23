@@ -1,94 +1,35 @@
 ---
 sidebar_position: 1
 ---
+import GetStartedSection from '@site/src/components/GetStartedSection';
 
-# 🚀 Get Started in 60 Seconds
+# AI-NOTES.XYZ - Your Second Brain.
 
-**Your digital brain for your info.** AI Notes keeps track of your notes, tasks, info, and events. Instantly search your data and get personalized answers powered by AI.
+**An app that connects everything.**
 
-<div style={{textAlign: 'center', margin: '2rem 0'}}>
-  <a href="http://demo.ai-notes.xyz/" target="_blank" style={{
-    display: 'inline-block',
-    padding: '1rem 2rem',
-    backgroundColor: '#54be61',
-    color: 'white',
-    textDecoration: 'none',
-    borderRadius: '8px',
-    fontSize: '1.2rem',
-    fontWeight: 'bold',
-    border: '2px solid #fff'
-  }}>
-    🎯 Try Demo Now →
-  </a>
-</div>
+AI Notes XYZ puts your **Chat**, **Notes**, **Tasks**, **Info Vault**, and **Tasks** in one place.
 
-**No signup needed.** Just click and start exploring.
+Then, it adds a **AI Layer** that understands it all.
 
 ---
 
-## ⚡ Quick Start (2 minutes)
+## 🚀 Try It in 10 Seconds
 
-1. **Chat** → Ask "What tasks are pending?" → Watch AI search automatically
-2. **Notes** → Write a quick idea, tag it → AI adds tags automatically
-3. **Tasks** → Create "Call John" with a due date → Ask the AI for ideas on next steps you might take
-4. **Life Events** → Add a birthday → AI auto-categorizes
-5. **Info Vault** → Add a place, person, document etc → Ask Chat about it → AI finds it instantly
+Go to the [**Live Demo**](http://demo.ai-notes.xyz/). No login needed.
 
-**Result:** You've seen how everything connects! AI searches your data automatically.
+1.  **Write a Note**: "Meeting with John at 5pm about Project X."
+2.  **Ask Chat**: "What am I meeting John?" It just knows.
 
 ---
 
-## 🌟 Core Features
+## ⚡ Key Features
 
-- **🗨️ AI Chat** - Ask anything. AI searches YOUR notes, tasks, and vault automatically
-- **📝 Notes** - Write ideas, meeting notes, reminders. AI adds tags and summaries automatically
-- **✅ Tasks** - Kanban boards (Todo → Doing → Done) with AI task generation
-- **🎉 Life Events** - Track birthdays, milestones, never forget dates
-- **🔐 Info Vault** - Central database for places, people info, documents
-- **🗺️ Maps & Calendar** - Visualize locations and see everything in one calendar
-
-**[👉 All Features →](/docs/feature/features)**
+*   **🧠 Chat**: Ask questions about your own life. ("Where did I put my passport?")
+*   **✅ Tasks**: Kanban boards that actually help you finish things.
+*   **📅 Calendar**: See your whole life in one view.
+*   **📝 Notes**: Auto-tagged and summarized by AI.
+*   **� Private**: Self-host on your own server. You own your data.
 
 ---
 
-## ✅ Why Users Love It
-
-- ✅ **Never forget** - AI remembers everything you save
-- ✅ **Everything connected** - Notes, tasks, vault work together
-- ✅ **100% private** - Self-hosted = your data stays yours
-- ✅ **AI-powered** - Gets smarter as you use it
-
----
-
-## ❓ Common Questions
-
-**Q: Do I need to sign up?**  
-A: No! Demo works immediately.
-
-**Q: Is my data private?**  
-A: Yes! When self-hosted, data stays on your server.
-
-**Q: What do I need to self-host?**  
-A: Docker, MongoDB, API keys. [See guide →](/docs/selfhost/selfhost-docker-build)
-
-**Q: What makes this different?**  
-A: AI searches ALL your data automatically. Ask "What do I need to do?" → Get answers from everything you've saved.
-
----
-
-<div style={{textAlign: 'center', margin: '2rem 0'}}>
-  <a href="http://demo.ai-notes.xyz/" target="_blank" style={{
-    display: 'inline-block',
-    padding: '1rem 2rem',
-    backgroundColor: '#54be61',
-    color: 'white',
-    textDecoration: 'none',
-    borderRadius: '8px',
-    fontSize: '1.2rem',
-    fontWeight: 'bold'
-  }}>
-    🚀 Try Demo Now →
-  </a>
-</div>
-
----
+<GetStartedSection />

@@ -2,70 +2,40 @@
 sidebar_position: 3
 ---
 
-# Notes
+# 📝 Notes - Your Digital Brain
 
-Write quick ideas, plans, and reminders. Tag, search, and star what matters. Edit with a rich editor, add files or voice notes, and get AI help.
+**Capture first. Organize later.**
 
-## Table of Contents
+Unlike regular note apps where you have to manually tag everything, AI Notes uses **AI to automatically tag, summarize, and categorize** your entries.
 
-- [Screenshot](#screenshot)
-- [Brief](#brief)
-- [Detail](#detail)
-  - [Note Management](#note-management)
-  - [Edit & View](#edit--view)
-  - [Tags & Search](#tags--search)
-  - [AI Help](#ai-help)
-  - [Attachments & Comments](#attachments--comments)
+![Notes List Interface](/img/features/notes/notes-1-notes-list.png)
 
-## Screenshot
+## 🌟 Why AI Notes are Different
 
-<div style={{display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center'}}>
-  <img src="/img/features/notes/notes-1-notes-list.png" alt="Notes list" style={{maxWidth: '75%'}} />
-  <img src="/img/features/notes/notes-2-notes-detail.png" alt="Notes detail" style={{maxWidth: '75%'}} />
-  <img src="/img/features/notes/notes-3-notes-detail-full-screen.png" alt="Note editor full screen" style={{maxWidth: '75%'}} />
-</div>
+### 1. No More Folder Fatigue
+Just write. The AI reads your content and suggests **Tags** (e.g., `#idea`, `#project-launch`, `#meeting`).
+It even generates a **1-sentence summary** so you can see what a note is about without opening it.
 
-## Brief
+### 2. Talk to Your Notes
+Open any note and click the **✨ Chat** button.
+*   Ask: *"Extract action items from this meeting."*
+*   Ask: *"Rewrite this in a professional email tone."*
 
-- Capture anything fast: title + rich description
-- Star important notes and group by workspace
-- Tag notes and search instantly
-- AI adds smart tags and a short summary
-- Open AI chat with the note for ideas or actions
-- Attach files or record voice; add comments
+---
 
-## Detail
+## 🚀 Pro Tips
 
-### Note Management
+:::info Favorites
+Star important notes to pin them to the top of your workspace. Perfect for daily journals or project specs.
+:::
 
-- Add, edit, delete notes
-- Star/Unstar to mark favorites
-- Switch workspaces to focus on a context
-- See created/updated timestamps and simple pagination
+## 🔍 Features at a Glance
 
-### Edit & View
+| Feature | Description |
+| :--- | :--- |
+| **Rich Text** | Code blocks, tables, lists, and headings supported. |
+| **Workspaces** | Keep "Work" notes separate from "Personal" notes. |
+| **Comments** | Add context or updates without changing the main content. |
+| **Search** | Full-text search across title, content, and tags. |
 
-- Clean editor with headings, lists, links, and code
-- Copy or download content when needed
-
-### Tags & Search
-
-- Type tags and press Enter
-- Filter by search text and starred status
-- AI Tags suggest helpful keywords automatically
-
-### AI Help
-
-- AI Summary: quick takeaways and action ideas
-- Open AI Chat with Note: brainstorm, plan, or turn ideas into tasks
-
-### Attachments & Comments
-
-- Upload files to a note
-- Record a voice note
-- Add comments for context or follow-ups
-
------
-
-Ready to get started? [Try the demo](http://demo.ai-notes.xyz/) or check out our [self-hosting guide](/docs/selfhost/selfhost-docker-build) to run your own instance.
-
+---

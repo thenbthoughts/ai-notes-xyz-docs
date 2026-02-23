@@ -2,7 +2,6 @@
 
 ## Note:
 1. The following instructions describe how to set up self-hosted ai-notes.xyz using Coolify.
-2. (Optional) For improved search performance, consider adding Ollama and Qdrant.
 
 ## Step 1: Docker file
 ```
@@ -45,6 +44,11 @@ COPY --from=buildfrontend /app/dist ./dist
 RUN node -e "require('fs').writeFileSync('./dist/DEPLOY_DATE.txt', new Date().toISOString())"
 EXPOSE 2000
 CMD ["npm", "start"]
+
+# How to build and run the Docker container:
+# 1. Build the Docker image: docker build -t ai-notes-docker .
+# 2. Run the Docker container: docker run -p 2000:2000 ai-notes-docker
+# 3. Access the application in your browser at http://localhost:2000
 ```
 
 ## Step 2: Env file

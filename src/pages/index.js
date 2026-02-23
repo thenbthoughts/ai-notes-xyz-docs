@@ -8,7 +8,7 @@ import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header
       className={clsx('hero hero--primary', styles.heroBanner)}
@@ -23,37 +23,32 @@ function HomepageHeader() {
       <div className={clsx('container', styles.heroContent)}>
         <div className={styles.heroTextWrapper}>
           <Heading as="h1" className={clsx('hero__title', styles.heroTitle)}>
-            {siteConfig.title}
+            Your Second Brain.
           </Heading>
           <p className={clsx('hero__subtitle', styles.heroSubtitle)}>
-            {siteConfig.tagline}
+            Notes + Tasks + AI. Private & Self-Hosted.
           </p>
           <p className={styles.heroDescription}>
-            Never lose track of what matters. AI automatically connects your notes, tasks, contacts, and events. 
-            Self-hosted. Private. Yours.
+            <strong>AI Notes</strong> connects everything you write, do, and remember into one intelligent workspace.
           </p>
-          
+
           <div className={styles.trustBadges}>
             <span className={styles.badge}>
-              <span className={styles.badgeIcon}>🤖</span>
-              AI-Powered Search
+              <span className={styles.badgeIcon}>🧠</span>
+              Remembers Everything
             </span>
             <span className={styles.badge}>
               <span className={styles.badgeIcon}>🔒</span>
-              100% Private
-            </span>
-            <span className={styles.badge}>
-              <span className={styles.badgeIcon}>🚀</span>
-              Self-Hostable
+              100% Private Data
             </span>
             <span className={styles.badge}>
               <span className={styles.badgeIcon}>⚡</span>
-              Fast & Simple
+              Free & Open Source
             </span>
           </div>
-          
+
           <div className={styles.scrollIndicator}>
-            <span className={styles.scrollText}>Scroll to explore features</span>
+            <span className={styles.scrollText}>See the Magic</span>
             <div className={styles.scrollArrow}>↓</div>
           </div>
         </div>
@@ -65,25 +60,18 @@ function HomepageHeader() {
             target="_blank"
             rel="noreferrer noopener"
           >
-            <span className={styles.buttonIcon}>🚀</span>
+            <span className={styles.buttonIcon}>🎮</span>
             <span className={styles.buttonText}>
-              Try Live Demo
-              <span className={styles.buttonSubtext}>No signup • Instant access</span>
+              Try Demo
+              <span className={styles.buttonSubtext}>No signup needed</span>
             </span>
           </Link>
           <Link
             className={clsx('button button--secondary button--lg', styles.secondaryButton)}
-            to="/docs/intro"
-          >
-            <span className={styles.buttonIcon}>📚</span>
-            <span className={styles.buttonText}>View Documentation</span>
-          </Link>
-          <Link
-            className={clsx('button button--primary button--lg', styles.tertiaryButton)}
             to="/docs/selfhost/selfhost-docker-build"
           >
-            <span className={styles.buttonIcon}>⚙️</span>
-            <span className={styles.buttonText}>Self-Host Guide</span>
+            <span className={styles.buttonIcon}>⚡</span>
+            <span className={styles.buttonText}>Install Now</span>
           </Link>
         </div>
       </div>
@@ -92,7 +80,7 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={siteConfig.title}

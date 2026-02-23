@@ -2,68 +2,36 @@
 sidebar_position: 6
 ---
 
-# Info Vault
+# 🔐 Info Vault
 
-Keep important info in one place. People, places, products, documents, add details, tag, search, and find fast.
+**A safe place for structured data.**
 
-## Table of Contents
+This isn't just a notebook. It's a database for your life. Store specific entities like **People**, **Places**, **products**, and **Documents**.
 
-- [Screenshot](#screenshot)
-- [Brief](#brief)
-- [Detail](#detail)
-  - [Add & Organize](#add--organize)
-  - [View & Edit](#view--edit)
-  - [Tags & Search](#tags--search)
-  - [Dates & Contacts](#dates--contacts)
-  - [Attachments & Comments](#attachments--comments)
+![Info Vault](/img/features/info-vault/info-vault-1-list.png)
 
-## Screenshot
+## ⚡ Why Use This?
 
-<div style={{display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center'}}>
-  <img src="/img/features/info-vault/info-vault-1-list.png" alt="Info Vault list" style={{maxWidth: '75%'}} />
-  <img src="/img/features/info-vault/info-vault-2-detail.png" alt="Info Vault detail" style={{maxWidth: '75%'}} />
-</div>
+### 1. Recall Details Instantly
+Store your **Wi-Fi password**, **Passport Number**, or **Vehicle VIN**.
+Next time, just ask the Chat: *"What is my passport number?"*
 
-## Brief
+### 2. Map Your World
+Add **Places** with addresses. They automatically appear on your **Map** view.
+Perfect for tracking favorite restaurants, travel spots, or client offices.
 
-- Save anything: type, name, notes, and tags
-- Star important items
-- Quick search and simple filters
-- Custom fields for your own data
-- Track significant dates
-- Add files, voice notes, and comments
+### 3. Manage Relationships
+Store contact details for **People**. Add notes about when you last met or what you discussed.
+Ask AI: *"Who do I know in New York?"*
 
-## Detail
+---
 
-### Add & Organize
+## 🔍 Supported Types
 
-- Choose a type: `Myself`, `Contact`, `Place`, `Event`, `Document`, `Product`, `Asset`, `Media`, or `Other`
-- Set sub-type, name, and notes
-- Use custom fields to record anything (e.g., “Purchased on”)
+-   **People**: Friends, family, colleagues.
+-   **Places**: Locations with map coordinates.
+-   **Documents**: PDFs, contracts, ID cards.
+-   **Products**: Warranty info, serial numbers.
+-   **Secrets**: Passwords and keys (stored locally).
 
-### View & Edit
-
-- See created/updated times and star state
-- Expand/hide description
-- Basic pagination to navigate lists
-
-### Tags & Search
-
-- Type tags and press Enter
-- Filter by search text and starred status
-
-### Dates & Contacts
-
-- Add significant dates (birthdays, purchases, etc.)
-- Optional contact info: emails, phones, websites, addresses
-- Relationship type, last contact date, and contact frequency
-
-### Attachments & Comments
-
-- Upload files
-- Record an audio comment
-- Add comments for context or follow‑ups
-
------
-
-Ready to get started? [Try the demo](http://demo.ai-notes.xyz/) or check out our [self-hosting guide](/docs/selfhost/selfhost-docker-build) to run your own instance.
+**[👉 Open Vault](http://demo.ai-notes.xyz/user/info-vault)**

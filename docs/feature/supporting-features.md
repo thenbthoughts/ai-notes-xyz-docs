@@ -1,7 +1,3 @@
----
-sidebar_position: 6
----
-
 # Supporting Features
 
 A quick, scannable overview of supporting capabilities that supercharge your workflow.
