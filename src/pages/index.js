@@ -64,7 +64,9 @@ function HomepageHeader() {
             <span className={styles.buttonText}>
               Try Demo
               <span className={styles.buttonSubtext}>
-                Username: demo, Password: demo1234
+                Username: demo
+                <br />
+                Password: demo1234
               </span>
             </span>
           </Link>

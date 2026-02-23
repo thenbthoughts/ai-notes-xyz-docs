@@ -5,13 +5,23 @@ export default function GetStartedSection() {
         <>
             <h2>🚀 Get Started</h2>
 
-            <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+            <div
+            style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '10px',
+                alignItems: 'center',
+            }}
+            >
                 <a
                     href="http://demo.ai-notes.xyz/"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
-                        padding: '1rem',
+                        paddingLeft: '20px',
+                        paddingRight: '20px',
+                        paddingTop: '10px',
+                        paddingBottom: '10px',
                         backgroundColor: '#25c2a0',
                         color: 'white',
                         borderRadius: '8px',
@@ -20,12 +30,17 @@ export default function GetStartedSection() {
                     }}
                 >
                     🎮 Try Demo Now
+                    <div>Username: demo</div>
+                    <div>Password: demo1234</div>
                 </a>
 
                 <a
                     href="/docs/selfhost/selfhost-docker-build"
                     style={{
-                        padding: '1rem',
+                        paddingLeft: '20px',
+                        paddingRight: '20px',
+                        paddingTop: '10px',
+                        paddingBottom: '10px',
                         backgroundColor: '#eee',
                         color: '#333',
                         borderRadius: '8px',
