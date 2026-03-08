@@ -23,6 +23,8 @@ import GetStartedSection from '@site/src/components/GetStartedSection';
         - Completed on 23rd Feb 2026
     - [x] Phase 4 - Short term memory
         - Completed on 23rd Feb 2026
+    - [x] Phase 5 - Talk with AI
+        - Completed on 8th March 2026
 - [x] Tasks
     - [x] Phase 1
         - Completed
