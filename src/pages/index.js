@@ -89,6 +89,26 @@ export default function Home() {
     <Layout
       title={siteConfig.title}
       description="Never lose track of what matters. AI Notes XYZ connects your notes, tasks, contacts, and events with AI-powered search. Self-hostable, private, and completely yours.">
+      <div
+        style={{
+          padding: "1rem",
+          background: "linear-gradient(135deg, #f5f5dc 0%, #ede9d5 100%)",
+          boxShadow: "inset 0 4px 12px rgba(0, 0, 0, 0.1)"
+        }}
+      >
+        <p
+          style={{
+            textAlign: "center",
+            color: "#606060",
+            margin: "0",
+            padding: "0",
+            fontWeight: "bold"
+          }}
+        >
+          If any questions or just want to share an idea or casual chats, please email me at {' '}
+          <a href="mailto:thenbthoughts@gmail.com" style={{ color: "#25c2a0" }}>thenbthoughts@gmail.com</a>
+        </p>
+      </div>
       <HomepageHeader />
       <main>
         <HomepageFeatures />
