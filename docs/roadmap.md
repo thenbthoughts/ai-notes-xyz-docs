@@ -25,6 +25,10 @@ import GetStartedSection from '@site/src/components/GetStartedSection';
         - Completed on 23rd Feb 2026
     - [x] Phase 5 - Talk with AI
         - Completed on 8th March 2026
+    - [x] Phase 6 - Basic Shell
+        - Completed on 27th April 2026
+    - [ ] Phase 7 - Basic Browser Integration
+    - [ ] Phase 8 - Advance Shell
 - [x] Tasks
     - [x] Phase 1
         - Completed
@@ -61,8 +65,6 @@ import GetStartedSection from '@site/src/components/GetStartedSection';
 
 ## Philosophy while Development
 - Each features will be completed to a great extend and will be production ready.
-- After adding these features, the focus will shift to maintenance, and no additional features will be added beyond the list.
-- **Exception:** If a significant number of users request a feature, and it is considered essential, it may be considered for addition.
 - Backup and restore: Implement a feature to allow users to back up their data and restore it when needed.
 - Security will be given utmost importance and handled with great care.
 
