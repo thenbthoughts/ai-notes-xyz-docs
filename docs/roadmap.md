@@ -19,16 +19,12 @@ import GetStartedSection from '@site/src/components/GetStartedSection';
         - Completed on 27th April 2025
     - [x] Phase 2 - Implement vector database and ollama embedding
         - Completed
-    - [x] Phase 3 - Answer Machine
+    - [x] Phase 3 - Short term memory
         - Completed on 23rd Feb 2026
-    - [x] Phase 4 - Short term memory
-        - Completed on 23rd Feb 2026
-    - [x] Phase 5 - Talk with AI
+    - [x] Phase 4 - Talk with AI
         - Completed on 8th March 2026
-    - [x] Phase 6 - Basic Shell
-        - Completed on 27th April 2026
-    - [ ] Phase 7 - Basic Browser Integration
-    - [ ] Phase 8 - Advance Shell
+    - [x] Phase 5 - Agent
+        - Completed on 29th August 2026
 - [x] Tasks
     - [x] Phase 1
         - Completed
