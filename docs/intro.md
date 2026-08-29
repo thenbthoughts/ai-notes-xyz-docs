@@ -15,19 +15,20 @@ Then, it adds a **AI Layer** that understands it all.
 
 ## 🚀 Try It in 10 Seconds
 
-Go to the [**Live Demo**](http://demo.ai-notes.xyz/). No login needed.
+Go to the [**Live Demo**](http://demo.ai-notes.xyz/).
 
-1.  **Write a Note**: "Meeting with John at 5pm about Project X."
-2.  **Ask Chat**: "What am I meeting John?" It just knows.
+Try these below username and password:
+Username: demo
+Password: demodemo
 
 ---
 
 ## ⚡ Key Features
 
 *   **🧠 Chat**: Ask questions about your own life. ("Where did I put my passport?")
-*   **✅ Tasks**: Kanban boards that actually help you finish things.
-*   **📅 Calendar**: See your whole life in one view.
 *   **📝 Notes**: Auto-tagged and summarized by AI.
+*   **✅ Tasks**: Task manager with flexible boards that help you get things done.
+*   **📅 Calendar**: See your whole life in one view.
 *   **� Private**: Self-host on your own server. You own your data.
 
 ---

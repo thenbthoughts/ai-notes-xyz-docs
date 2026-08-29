@@ -31,7 +31,7 @@ export default function GetStartedSection() {
                 >
                     🎮 Try Demo Now
                     <div>Username: demo</div>
-                    <div>Password: demo1234</div>
+                    <div>Password: demodemo</div>
                 </a>
 
                 <a
