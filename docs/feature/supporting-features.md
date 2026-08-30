@@ -1,6 +1,6 @@
 import GetStartedSection from '@site/src/components/GetStartedSection';
 
-# Supporting Features
+# 🚀 Supporting Features
 
 A quick, scannable overview of supporting capabilities that supercharge your workflow.
 

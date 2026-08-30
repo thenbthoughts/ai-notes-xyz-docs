@@ -3,7 +3,7 @@ sidebar_position: 7
 ---
 import GetStartedSection from '@site/src/components/GetStartedSection';
 
-# Setting
+# ⚙️ Setting
 
 The Setting page lets you customize AI Notes:
 

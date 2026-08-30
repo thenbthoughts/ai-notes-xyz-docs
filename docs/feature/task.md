@@ -3,7 +3,7 @@ sidebar_position: 4
 ---
 import GetStartedSection from '@site/src/components/GetStartedSection';
 
-# Task Management
+# 🗂️ Task Management
 
 Create tasks, set priorities and due dates, move them across lists, and finish with confidence.
 
@@ -22,8 +22,7 @@ Create tasks, set priorities and due dates, move them across lists, and finish w
 ## Screenshot
 
 <div style={{display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center'}}>
-  <img src="/img/features/tasks/task-1-task-list.png" alt="Tasks board" style={{maxWidth: '75%'}} />
-  <img src="/img/features/tasks/task-2-task-detail.png" alt="Task detail" style={{maxWidth: '75%'}} />
+  <img src="/img/ai-notes-xyz-screenshot/ai-notes-task.png" alt="Tasks board" style={{maxWidth: '75%'}} />
 </div>
 
 ## Brief

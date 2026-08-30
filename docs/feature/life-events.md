@@ -9,7 +9,7 @@ import GetStartedSection from '@site/src/components/GetStartedSection';
 
 Track the moments that matter—birthdays, anniversaries, medical history, or just a great day you want to remember.
 
-![Life Events List](/img/features/life-event/life-event-1-list.png)
+![Life Events List](/img/ai-notes-xyz-screenshot/ai-notes-life-event.png)
 
 ## ⚡ Why Use This?
 

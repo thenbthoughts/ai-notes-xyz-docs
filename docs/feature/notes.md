@@ -9,7 +9,7 @@ import GetStartedSection from '@site/src/components/GetStartedSection';
 
 Unlike regular note apps where you have to manually tag everything, AI Notes uses **AI to automatically tag, summarize, and categorize** your entries.
 
-![Notes List Interface](/img/features/notes/notes-1-notes-list.png)
+![Notes List Interface](/img/ai-notes-xyz-screenshot/ai-notes-notes.png)
 
 ## 🌟 Why AI Notes are Different
 

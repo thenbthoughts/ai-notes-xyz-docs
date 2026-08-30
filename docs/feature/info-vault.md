@@ -9,7 +9,7 @@ import GetStartedSection from '@site/src/components/GetStartedSection';
 
 This isn't just a notebook. It's a database for your life. Store specific entities like **People**, **Places**, **products**, and **Documents**.
 
-![Info Vault](/img/features/info-vault/info-vault-1-list.png)
+![Info Vault](/img/ai-notes-xyz-screenshot/ai-notes-info-vault.png)
 
 ## ⚡ Why Use This?
 

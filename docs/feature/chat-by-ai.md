@@ -9,7 +9,7 @@ import GetStartedSection from '@site/src/components/GetStartedSection';
 
 Most AI tools don't know who you are. **AI Notes does.** It reads your notes, tasks, and life events to give you personalized, context-aware answers.
 
-![Chat with AI Screenshot](/img/features/chat-by-ai-llm/chat-by-ai-2-chat-with-ai-llm.png)
+![Chat with AI Screenshot](/img/ai-notes-xyz-screenshot/ai-notes-chat.png)
 
 ### 🌟 Why use AI Notes Chat?
 
@@ -47,13 +47,6 @@ Drag and drop **Images**, **PDFs**, or **Voice Notes** directly into the chat. T
 | **History** | All chats are saved. Search past conversations by keyword. |
 | **Privacy** | Your data stays on your server (if self-hosting). |
 | **Voice Mode** | Speak to the AI and hear it speak back (Browser TTS/STT). |
-
-### 📸 See it in Action
-
-<div style={{display: 'flex', gap: '10px', overflowX: 'auto', paddingBottom: '10px'}}>
-  <img src="/img/features/chat-by-ai-llm/chat-by-ai-4-select-context-1.png" alt="Context Selection" style={{height: '200px', borderRadius: '8px', border: '1px solid #ddd'}} />
-  <img src="/img/features/chat-by-ai-llm/chat-by-ai-3-generate-next-questions.png" alt="Auto Questions" style={{height: '200px', borderRadius: '8px', border: '1px solid #ddd'}} />
-</div>
 
 ---
 
