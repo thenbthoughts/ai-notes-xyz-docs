@@ -8,37 +8,39 @@ This step is optional. Skip it if you only want notes, tasks, and chat.
 
 The workspace is a **second Coolify app**. It is not the main website. It gives you the agent desktop and the workspace API.
 
+Follow the screens in order.
+
 ## Table of contents
 
 1. [Add a resource](#add-a-resource)
 2. [Pick Public Repository](#pick-public-repository)
 3. [Enter the workspace repo URL](#enter-the-workspace-repo-url)
 4. [Use Dockerfile and continue](#use-dockerfile-and-continue)
-5. [Set ports 2001 and 3000](#set-ports-2001-and-3000)
-6. [Set API_TOKEN and a strong password](#set-api_token-and-a-strong-password)
+5. [Set the name, domains, and ports](#set-the-name-domains-and-ports)
+6. [Set API_TOKEN, PASSWORD, and OPENCODE_SERVER_PASSWORD](#set-api_token-password-and-opencode_server_password)
 7. [Add disk at /config](#add-disk-at-config)
-8. [Set shared memory to 1gb](#set-shared-memory-to-1gb)
-9. [Attach two domains](#attach-two-domains)
+8. [Add DNS records](#add-dns-records)
+9. [Check domains](#check-domains)
 10. [Deploy and wait](#deploy-and-wait)
 11. [Connect Settings](#connect-settings)
 
-## Add a resource {#add-a-resource}
+## 3.1 Add a resource {#add-a-resource}
 
-In the same Coolify project, click **+ Add Resource** (or **+ New**).
+Stay in the same Coolify project you used for the main app.
 
-:::note Screenshot
-Add later: `./img-step-1-add-resource.png`
-:::
+Click **+ New**.
 
-## Pick Public Repository {#pick-public-repository}
+![Click + New](./img-step-1-add-resource.png)
+
+## 3.2 Pick Public Repository {#pick-public-repository}
 
 Under **Git Based**, click **Public Repository**.
 
-:::note Screenshot
-Add later: `./img-step-2-public-repository.png`
-:::
+Coolify will clone the workspace from GitHub and build it.
 
-## Enter the workspace repo URL {#enter-the-workspace-repo-url}
+![Click Public Repository](./img-step-2-public-repository.png)
+
+## 3.3 Enter the workspace repo URL {#enter-the-workspace-repo-url}
 
 Set the repository URL to:
 
@@ -46,13 +48,13 @@ Set the repository URL to:
 
 Click **Check repository**.
 
-:::note Screenshot
-Add later: `./img-step-3-enter-repo-url.png`
-:::
+Leave **Branch** as `main`.
 
-## Use Dockerfile and continue {#use-dockerfile-and-continue}
+![Enter the workspace repo URL](./img-step-3-enter-repo-url.png)
 
-Set **Build Pack** to **Dockerfile**. Leave the Dockerfile at the repo root. Leave **Base Directory** as `/`.
+## 3.4 Use Dockerfile and continue {#use-dockerfile-and-continue}
+
+Set **Build Pack** to **Dockerfile**. Leave **Base Directory** as `/`.
 
 Do not set a custom start command. The image already starts the desktop and the workspace API.
 
@@ -60,118 +62,125 @@ Click **Continue**.
 
 The first build can take 10 to 20 minutes. The image is large (desktop, browser, and tools).
 
-:::note Screenshot
-Add later: `./img-step-4-dockerfile.png`
-:::
+![Select Dockerfile and click Continue](./img-step-4-dockerfile.png)
 
-## Set ports 2001 and 3000 {#set-ports-2001-and-3000}
+## 3.5 Set the name, domains, and ports {#set-the-name-domains-and-ports}
 
-Set **Ports Exposes** to:
+On **General**, set a name (for example `ai-notes-xyz-agent-workspace-demo`).
 
-`2001,3000`
+Leave **Build Pack** as **Dockerfile**.
 
-- **2001** is the workspace API
-- **3000** is the desktop in the browser (inside the container)
+Set **Domains** to two public URLs, with the container port after each one:
+
+```text
+https://workspace.example.com:3000,https://workspace-api.example.com:2001
+```
+
+| URL | Port | What it is |
+| --- | --- | --- |
+| `https://workspace.example.com:3000` | 3000 | Desktop in the browser |
+| `https://workspace-api.example.com:2001` | 2001 | Workspace API |
+
+The `:3000` and `:2001` tell Coolify which port inside the container to use. People usually open the site on normal HTTPS (port 443). You do not type `:3000` in the browser if Coolify is proxying for you.
+
+Use two hostnames (one for the desktop, one for the API). That matches the Settings form later.
 
 Do not put port **3001** on the public proxy. That port is a self-signed HTTPS desktop. Coolify already handles HTTPS.
 
-:::note Screenshot
-Add later: `./img-step-5-ports.png`
-:::
+Click **Save**.
 
-## Set API_TOKEN and a strong password {#set-api_token-and-a-strong-password}
+![Set name, domains, and ports](./img-step-5-ports.png)
 
-Open **Environment Variables**. Add these. Mark secrets as secret.
+## 3.6 Set API_TOKEN, PASSWORD, and OPENCODE_SERVER_PASSWORD {#set-api_token-password-and-opencode_server_password}
+
+Open **Environment Variables**. Click **+ Add**.
+
+Add these three. Mark them as secret. Keep **Available at Buildtime** and **Available at Runtime** checked.
 
 | Name | What it is |
 | --- | --- |
 | `API_TOKEN` | A long random string. The main app sends this as `X-API-Token`. If it is empty, protected routes fail. |
 | `PASSWORD` | Login password for the desktop. Do **not** use the default `agentworkspace` on the public internet. |
-| `CUSTOM_USER` | Desktop login name. Default is `abc`. You can leave this. |
+| `OPENCODE_SERVER_PASSWORD` | Password for OpenCode inside the workspace (the agent code runner). Do not use the default `password` on the public internet. |
 
-Pick a strong password. Anyone who can open the desktop can run commands in that container.
+The desktop login name is `CUSTOM_USER`. If you do not set it, it is `abc`.
 
-:::note Screenshot
-Add later: `./img-step-6-token-password.png`
-:::
+Pick strong passwords. Anyone who can open the desktop can run commands in that container.
 
-## Add disk at /config {#add-disk-at-config}
+![Add API_TOKEN, PASSWORD, and OPENCODE_SERVER_PASSWORD](./img-step-6-token-password.png)
 
-Open **Storages**. Add a volume.
+## 3.7 Add disk at /config {#add-disk-at-config}
 
-Set the path **inside the container** to `/config`.
+Open **Persistent Storage**.
+
+If you see **No storage found**, click **+ Add**, then **Directory Mount**.
+
+![Add a Directory Mount](./img-step-7-disk.png)
+
+In **Add Directory Mount**:
+
+- **Source Directory** — a folder on the Coolify server, for example `/home/YOUR_USER/workspace-config`
+- **Destination Directory** — `/config`
+
+Click **Add**.
 
 This folder keeps the desktop home and agent files. If you skip this, files can disappear when you redeploy.
 
-:::note Screenshot
-Add later: `./img-step-7-disk.png`
-:::
+![Set source folder and /config](./img-step-7-disk-add.png)
 
-## Set shared memory to 1gb {#set-shared-memory-to-1gb}
+## 3.8 Add DNS records {#add-dns-records}
 
-The browser desktop needs extra shared memory.
+At your DNS host, add two **A** records. Point both at your Coolify server IP.
 
-In **Advanced** (or custom Docker options), set:
+| Host | Points to |
+| --- | --- |
+| `workspace` | your server IP |
+| `workspace-api` | your server IP |
 
-`--shm-size=1gb`
+Use the hostnames that match the domains you set in Coolify. Wait for DNS to update before you expect HTTPS to work.
 
-Without this, the desktop is often black or unstable.
+![Add two A records for the workspace](./img-step-9-dns.png)
 
-The server should have enough RAM (about 8 GB is a safe minimum for this image).
+## 3.9 Check domains {#check-domains}
 
-:::note Screenshot
-Add later: `./img-step-8-shm.png`
-:::
+Go back to **General**. Confirm **Domains** still has both URLs, with `:3000` on the desktop host and `:2001` on the API host.
 
-## Attach two domains {#attach-two-domains}
+![Check the two domain URLs](./img-step-9-domains.png)
 
-Add two public URLs:
+## 3.10 Deploy and wait {#deploy-and-wait}
 
-| Example | Port | What it is |
-| --- | --- | --- |
-| `https://workspace-api.example.com:2001` | 2001 | Workspace API |
-| `https://workspace.example.com:3000` | 3000 | Desktop in the browser |
+Click **Deploy**.
 
-If Coolify only shows one port, put `2001,3000` in **Ports Exposes** first, then add the second domain with `:3000`.
+The first build is slow. Wait until the log finishes.
 
-The desktop uses WebSockets (a live connection). Coolify’s proxy usually allows this. If the page loads but the screen stays black, check that WebSockets are not blocked.
+![Click Deploy](./img-step-10-deploy-click-on-deploy.png)
 
-Set the health check to port **2001** and path `/api/` (or `/api/shell-engine/about`). Do not health-check `/` on the desktop.
-
-:::note Screenshot
-Add later: `./img-step-9-domains.png`
-:::
-
-## Deploy and wait {#deploy-and-wait}
-
-Save and click **Deploy**. Wait for the image to build.
+When it is done, **Deployments** should show **Success**, and the app should say **Running**.
 
 Check:
 
-1. Open the API domain at `/api/`. You should see a welcome text.
-2. Open the desktop domain. Log in with `CUSTOM_USER` (default `abc`) and your `PASSWORD`.
+1. Open the API URL at `/api/`. You should see a welcome text.
+2. Open the desktop URL. Log in with `CUSTOM_USER` (default `abc`) and your `PASSWORD`.
 
-:::note Screenshot
-Add later: `./img-step-10-deploy.png`
-:::
+The desktop uses a live connection (WebSockets). If the page loads but the screen stays black, check that WebSockets are not blocked.
 
-## Connect Settings {#connect-settings}
+![Deployed successfully](./img-step-10-deploy.png)
 
-Open the main AI Notes app. Go to **Settings → Agent Workspace** and paste:
+## 3.11 Connect Settings {#connect-settings}
 
-- **Desktop URL** — your desktop domain, like `https://workspace.example.com/`
-- **Desktop username and password** — same as `CUSTOM_USER` / `PASSWORD`
-- **API URL** — the API origin only, like `https://workspace-api.example.com/` (no `/api` at the end)
+Open the main AI Notes app. Go to **Settings → API keys**. Click **Agent Workspace**.
+
+Paste:
+
+- **Desktop URL** — the desktop origin, like `https://workspace.example.com` (no path)
+- **Desktop Basic Auth Username** — `CUSTOM_USER` (default `abc`)
+- **Desktop Basic Auth Password** — the same `PASSWORD` you set in Coolify
+- **Agent Workspace API URL** — the API origin only, like `https://workspace-api.example.com` (no `/api` at the end)
 - **API token** — the same `API_TOKEN` you set in Coolify
 
-If you want the agent to call back into the app, also set the MCP token in Settings.
+Click **Verify and save**. A green **Valid** badge means it worked.
 
 You are done.
 
-:::note Screenshot
-Add later: `./img-step-11-connect-settings.png`
-:::
+![Connect Agent Workspace in Settings](./img-step-11-connect-settings.png)
 
-**Back:** [Step 2](/docs/selfhost/coolify-cloud/coolify-cloud-step-02-add-app-from-git-and-deploy)
-
-**Overview:** [Coolify Cloud](/docs/selfhost/coolify-cloud/coolify-cloud-intro)

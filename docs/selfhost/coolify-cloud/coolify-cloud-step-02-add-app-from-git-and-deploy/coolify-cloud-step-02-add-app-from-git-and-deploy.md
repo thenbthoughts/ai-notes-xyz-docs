@@ -139,7 +139,3 @@ Click **Verify and save**. A green **Valid** badge means it worked.
 The app is now running. Stop here if you only want notes, tasks, and chat.
 
 ![Add an API key in Settings](./img-step-12-add-api-key.png)
-
-**Back:** [Step 1](/docs/selfhost/coolify-cloud/coolify-cloud-step-01-create-project)
-
-**Next (optional):** [Step 3 — Add the workspace app from Git and deploy](/docs/selfhost/coolify-cloud/coolify-cloud-step-03-add-workspace-app-from-git-and-deploy)
