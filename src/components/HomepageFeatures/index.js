@@ -1,112 +1,50 @@
 import clsx from 'clsx';
+import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
+const DEMO_URL = 'https://demo.ai-notes.xyz';
+
 const FeatureList = [
   {
-    title: 'Unified Dashboard',
-    imageUrl: '/img/ai-notes-xyz-screenshot/ai-notes-homepage.png',
-    description: (
-      <>
-        Your command center. See all your tasks, notes, upcoming events, and AI-powered suggestions in one beautiful view.
-      </>
-    ),
-  },
-  {
-    title: 'AI Chat Assistant',
+    title: 'Chat',
     imageUrl: '/img/ai-notes-xyz-screenshot/ai-notes-chat.png',
-    description: (
-      <>
-        Ask natural questions and get instant answers. The AI searches through YOUR personal notes, tasks, contacts, and events—all automatically.
-      </>
-    ),
+    description: 'Ask a question. The answer comes from your notes, tasks, and events, not the public web.',
   },
   {
-    title: 'Smart Notes',
+    title: 'Notes',
     imageUrl: '/img/ai-notes-xyz-screenshot/ai-notes-notes.png',
-    description: (
-      <>
-        Write your notes naturally—AI will automatically add tags, generate summaries, and let you chat with your notes or find them instantly with simple search.
-      </>
-    ),
+    description: 'Write first. AI adds tags and a short summary so you can find it later.',
   },
   {
-    title: 'Visual Task Boards',
+    title: 'Tasks',
     imageUrl: '/img/ai-notes-xyz-screenshot/ai-notes-task.png',
-    description: (
-      <>
-        Kanban-style boards (Todo → Doing → Done). Drag and drop tasks, set priorities, and even generate tasks with AI assistance.
-      </>
-    ),
+    description: 'Move work on a board: Todo, Doing, Done. Ask chat what to do next.',
   },
   {
-    title: 'Life Events Tracker',
-    imageUrl: '/img/ai-notes-xyz-screenshot/ai-notes-life-events.png',
-    description: (
-      <>
-        Never miss an important date. Track birthdays, anniversaries, milestones, and more. AI automatically categorizes and tags everything.
-      </>
-    ),
+    title: 'Self-host',
+    imageUrl: '/img/ai-notes-xyz-screenshot/ai-notes-setting.png',
+    description: 'Run it on your server. Bring your own AI key (OpenRouter, Groq, Ollama, or local).',
   },
-  {
-    title: 'Info Vault',
-    imageUrl: '/img/ai-notes-xyz-screenshot/ai-notes-info-vault.png',
-    description: (
-      <>
-        Your personal knowledge base. Store contacts, places, documents, and any important information. Effortlessly find what you need using search.
-      </>
-    ),
-  },
-  {
-    title: 'Automated Scheduling',
-    imageUrl: '/img/ai-notes-xyz-screenshot/ai-notes-task-schedule.png',
-    description: (
-      <>
-        Create recurring tasks with daily, weekly, or monthly schedules.<br />
-        You can also create email reminders to yourself that are automatically delivered to your inbox.
-      </>
-    ),
-  }
 ];
 
-function Feature({ imageUrl, title, description, idx }) {
+function Feature({ imageUrl, title, description }) {
   return (
-    <div className={clsx('col col--12', styles.featureCard)} style={{ animationDelay: `${idx * 0.1}s` }}>
-      <div className="text--center">
-        <a
-          href="https://demo.ai-notes.xyz/"
-          target='_blank'
-          rel="noopener noreferrer"
-          className={styles.featureImageLink}
-        >
-          <img
-            src={imageUrl}
-            alt={title}
-            className={styles.featureImage}
-          />
-        </a>
-        <div className={styles.viewFullSizeWrapper}>
-          <a
-            href={imageUrl}
-            target='_blank'
-            rel='noopener noreferrer'
-            className={styles.viewFullSizeButton}
-          >
-            <span className={styles.buttonIcon}>🔍</span>
-            View Full Size
-          </a>
-        </div>
-      </div>
-      <div className={clsx('text--center padding-horiz--md', styles.featureContent)}>
-        <Heading as="h3" className={styles.featureTitle}>{title}</Heading>
-        <p className={styles.featureDescription}>{description}</p>
-      </div>
-
-      {FeatureList.length !== idx + 1 && (
-        <div className={styles.featureDivider}>
-          <div className={styles.dividerLine}></div>
-        </div>
-      )}
+    <div className={clsx('col col--6', styles.featureCard)}>
+      <a
+        href={DEMO_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.featureImageLink}
+      >
+        <img
+          src={imageUrl}
+          alt={title}
+          className={styles.featureImage}
+        />
+      </a>
+      <Heading as="h3" className={styles.featureTitle}>{title}</Heading>
+      <p className={styles.featureDescription}>{description}</p>
     </div>
   );
 }
@@ -115,18 +53,63 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className={styles.featuresHeader}>
-          <Heading as="h2" className={styles.featuresTitle}>
-            Everything You Need, All in One Place
+        <div className={styles.howItWorks}>
+          <Heading as="h2" className={styles.sectionTitle}>
+            How it works
           </Heading>
-          <p className={styles.featuresSubtitle}>
-            AI Notes XYZ connects your notes, tasks, contacts, and events—then helps you find anything instantly with AI-powered search.
-          </p>
+          <ol className={styles.steps}>
+            <li>
+              <strong>Write</strong> a note, task, or event.
+            </li>
+            <li>
+              <strong>AI organizes</strong> it with tags and a short summary.
+            </li>
+            <li>
+              <strong>Ask in Chat.</strong> It searches your data, not the public web.
+            </li>
+          </ol>
+        </div>
+
+        <div className={styles.featuresHeader}>
+          <Heading as="h2" className={styles.sectionTitle}>
+            What you get
+          </Heading>
         </div>
         <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} idx={idx} />
-          ))}
+          {FeatureList.map((props, idx) => {
+            return (
+              <Feature key={idx} {...props} />
+            );
+          })}
+        </div>
+
+        <p className={styles.alsoLine}>
+          Also:{' '}
+          <Link to="/docs/feature/supporting-features">calendar</Link>,{' '}
+          <Link to="/docs/feature/life-events">life events</Link>,{' '}
+          <Link to="/docs/feature/info-vault">info vault</Link>.
+        </p>
+
+        <div className={styles.privacyBox}>
+          <p>
+            Your data stays on your server. Use OpenRouter, Groq, Ollama, or a local model.
+          </p>
+        </div>
+
+        <div className={styles.bottomCta}>
+          <Link
+            className={clsx('button button--primary button--lg', styles.bottomDemo)}
+            to={DEMO_URL}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <span className={styles.bottomDemoText}>
+              Try Demo
+              <span className={styles.bottomDemoSub}>
+                Username: demo / Password: demodemo
+              </span>
+            </span>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,14 +1,15 @@
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
+const DEMO_URL = 'https://demo.ai-notes.xyz';
+const CHAT_SCREENSHOT = '/img/ai-notes-xyz-screenshot/ai-notes-chat.png';
+
 function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
   return (
     <header
       className={clsx('hero hero--primary', styles.heroBanner)}
@@ -16,67 +17,76 @@ function HomepageHeader() {
         backgroundImage: 'url(/img/ai-notes-xyz-background.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        minHeight: '85vh',
       }}
     >
       <div className={styles.heroOverlay}></div>
       <div className={clsx('container', styles.heroContent)}>
-        <div className={styles.heroTextWrapper}>
-          <Heading as="h1" className={clsx('hero__title', styles.heroTitle)}>
-            Your Second Brain.
-          </Heading>
-          <p className={clsx('hero__subtitle', styles.heroSubtitle)}>
-            Notes + Tasks + AI. Private & Self-Hosted.
-          </p>
-          <p className={styles.heroDescription}>
-            <strong>AI Notes</strong> connects everything you write, do, and remember into one intelligent workspace.
-          </p>
+        <div className={styles.heroGrid}>
+          <div className={styles.heroCopy}>
+            <p className={styles.trustBadge}>
+              <svg
+                className={styles.badgeIcon}
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  fill="currentColor"
+                  d="M12 2a5 5 0 0 1 5 5v2h1a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h1V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v2h6V7a3 3 0 0 0-3-3z"
+                />
+              </svg>
+              Self-hosted, Bring your own AI key, Your data stays yours
+            </p>
+            <Heading as="h1" className={clsx('hero__title', styles.heroTitle)}>
+              Your notes. Your AI. Your server.
+            </Heading>
+            <p className={styles.heroDescription}>
+              AI Notes XYZ is a self-hosted notes and chat app. An AI agent answers from your notes, tasks, life events, and memory.
+            </p>
 
-          <div className={styles.trustBadges}>
-            <span className={styles.badge}>
-              <span className={styles.badgeIcon}>🧠</span>
-              Remembers Everything
-            </span>
-            <span className={styles.badge}>
-              <span className={styles.badgeIcon}>🔒</span>
-              100% Private Data
-            </span>
-            <span className={styles.badge}>
-              <span className={styles.badgeIcon}>⚡</span>
-              Free & Open Source
-            </span>
+            <ul className={styles.exampleList}>
+              <li>What should I work on next?</li>
+              <li>What should I buy at the store?</li>
+              <li>Where did I put my passport?</li>
+            </ul>
+
+            <div className={styles.ctaBlock}>
+              <div className={styles.buttons}>
+                <Link
+                  className={clsx('button button--lg', styles.primaryButton)}
+                  to={DEMO_URL}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Try Demo
+                </Link>
+                <Link
+                  className={clsx('button button--lg', styles.secondaryButton)}
+                  to="/docs/selfhost/local-server-by-docker/overview"
+                >
+                  Install Now
+                </Link>
+              </div>
+              <p className={styles.demoHint}>
+                Demo login: <strong>demo</strong> / <strong>demodemo</strong>
+              </p>
+            </div>
           </div>
 
-          <div className={styles.scrollIndicator}>
-            <span className={styles.scrollText}>See the Magic</span>
-            <div className={styles.scrollArrow}>↓</div>
-          </div>
-        </div>
-
-        <div className={`${styles.buttons} ${styles.buttondiv}`}>
-          <Link
-            className={clsx('button button--primary button--lg', styles.primaryButton)}
-            to="https://demo.ai-notes.xyz"
+          <a
+            className={styles.heroShotLink}
+            href={DEMO_URL}
             target="_blank"
             rel="noreferrer noopener"
           >
-            <span className={styles.buttonIcon}>🎮</span>
-            <span className={styles.buttonText}>
-              Try Demo
-              <span className={styles.buttonSubtext}>
-                Username: demo
-                <br />
-                Password: demodemo
-              </span>
-            </span>
-          </Link>
-          <Link
-            className={clsx('button button--secondary button--lg', styles.secondaryButton)}
-            to="/docs/selfhost/local-server-by-docker/overview"
-          >
-            <span className={styles.buttonIcon}>⚡</span>
-            <span className={styles.buttonText}>Install Now</span>
-          </Link>
+            <img
+              className={styles.heroShot}
+              src={CHAT_SCREENSHOT}
+              alt="Chat answering a question from your own tasks and notes"
+            />
+          </a>
         </div>
       </div>
     </header>
@@ -84,29 +94,15 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={siteConfig.title}
-      description="Never lose track of what matters. AI Notes XYZ connects your notes, tasks, contacts, and events with AI-powered search. Self-hostable, private, and completely yours.">
-      <div
-        style={{
-          padding: "1rem",
-          background: "linear-gradient(135deg, #f5f5dc 0%, #ede9d5 100%)",
-          boxShadow: "inset 0 4px 12px rgba(0, 0, 0, 0.1)"
-        }}
-      >
-        <p
-          style={{
-            textAlign: "center",
-            color: "#606060",
-            margin: "0",
-            padding: "0",
-            fontWeight: "bold"
-          }}
-        >
-          If any questions or just want to share an idea or casual chats, please email me at {' '}
-          <a href="mailto:thenbthoughts@gmail.com" style={{ color: "#25c2a0" }}>thenbthoughts@gmail.com</a>
+      title="Your notes. Your AI. Your server."
+      description="AI Notes XYZ is a self-hosted notes and chat app. An AI agent answers from your notes, tasks, life events, and memory."
+    >
+      <div className={styles.emailBar}>
+        <p className={styles.emailBarText}>
+          Questions or ideas? Email{' '}
+          <a href="mailto:thenbthoughts@gmail.com">thenbthoughts@gmail.com</a>
         </p>
       </div>
       <HomepageHeader />
