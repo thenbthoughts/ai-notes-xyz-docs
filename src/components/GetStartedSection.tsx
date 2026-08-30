@@ -35,7 +35,7 @@ export default function GetStartedSection() {
                 </a>
 
                 <a
-                    href="/docs/selfhost/selfhost-docker-build"
+                    href="/docs/selfhost/local-server-by-docker/overview"
                     style={{
                         paddingLeft: '20px',
                         paddingRight: '20px',
@@ -49,6 +49,23 @@ export default function GetStartedSection() {
                     }}
                 >
                     ⚡ Install by Docker
+                </a>
+
+                <a
+                    href="/docs/selfhost/overview"
+                    style={{
+                        paddingLeft: '20px',
+                        paddingRight: '20px',
+                        paddingTop: '10px',
+                        paddingBottom: '10px',
+                        backgroundColor: '#eee',
+                        color: '#333',
+                        borderRadius: '8px',
+                        fontWeight: 'bold',
+                        textDecoration: 'none',
+                    }}
+                >
+                    All deploy ways
                 </a>
             </div>
         </>

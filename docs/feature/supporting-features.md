@@ -60,6 +60,6 @@ A quick, scannable overview of supporting capabilities that supercharge your wor
 
 -----
 
-Ready to get started? [Try the demo](http://demo.ai-notes.xyz/) or check out our [self-hosting guide](/docs/selfhost/selfhost-docker-build) to run your own instance.
+Ready to get started? [Try the demo](http://demo.ai-notes.xyz/) or check out our [self-hosting guide](/docs/selfhost/overview) to run your own instance.
 
 <GetStartedSection />

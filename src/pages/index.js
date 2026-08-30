@@ -66,13 +66,13 @@ function HomepageHeader() {
               <span className={styles.buttonSubtext}>
                 Username: demo
                 <br />
-                Password: demo1234
+                Password: demodemo
               </span>
             </span>
           </Link>
           <Link
             className={clsx('button button--secondary button--lg', styles.secondaryButton)}
-            to="/docs/selfhost/selfhost-docker-build"
+            to="/docs/selfhost/local-server-by-docker/overview"
           >
             <span className={styles.buttonIcon}>⚡</span>
             <span className={styles.buttonText}>Install Now</span>

@@ -29,7 +29,19 @@ Password: demodemo
 *   **📝 Notes**: Auto-tagged and summarized by AI.
 *   **✅ Tasks**: Task manager with flexible boards that help you get things done.
 *   **📅 Calendar**: See your whole life in one view.
-*   **� Private**: Self-host on your own server. You own your data.
+*   **Private**: Self-host on your own server. You own your data.
+
+---
+
+## Deploy
+
+Pick one path:
+
+- [Local server by Docker](/docs/selfhost/local-server-by-docker/overview) — run it on your computer
+- [Coolify Cloud](/docs/selfhost/coolify-cloud/coolify-cloud-intro) — Coolify on a VPS
+- [Ubuntu + nginx Cloud](/docs/selfhost/ubuntu-nginx-cloud/overview) — Ubuntu server with nginx
+
+See [How to deploy](/docs/selfhost/overview) for the full list.
 
 ---
 

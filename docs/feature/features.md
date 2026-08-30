@@ -33,6 +33,6 @@ Store passwords, contacts, and asset details securely. The AI uses this for *you
 
 ---
 
-**[👉 Try the Demo](http://demo.ai-notes.xyz/)** or **[Install Now](/docs/selfhost/selfhost-docker-build)**.
+**[👉 Try the Demo](http://demo.ai-notes.xyz/)** or **[Install Now](/docs/selfhost/local-server-by-docker/overview)**.
 
 <GetStartedSection />

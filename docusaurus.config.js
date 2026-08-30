@@ -36,7 +36,19 @@ const config = {
     locales: ['en'],
   },
 
+  clientModules: ['./src/gtagStub.js'],
+
   headTags: [
+    {
+      tagName: 'script',
+      attributes: {
+        type: 'text/javascript',
+      },
+      innerHTML: `
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = window.gtag || function(){ dataLayer.push(arguments); };
+      `,
+    },
     {
       tagName: 'script',
       attributes: {
@@ -59,6 +71,8 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          // Keep 01-step-name.md in the URL so deploy step links stay numbered.
+          numberPrefixParser: false,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
